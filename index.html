@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>JobCert - สมัครงาน AI ดิจิทัล อบรม และสอบ Certify</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="#home" onclick="แสดงหน้า('home'); return false;" class="navbar-brand p-0">
+                        <h1 class="text-primary mb-0"><i class="fas fa-robot me-2"></i> JobCert</h1>
+                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <!-- เมนูหลักของเว็บ ตอนนี้เป็น SPA แล้ว กดแล้วสลับหน้าด้วย JS ไม่มีการโหลดหน้าใหม่ -->
+                        <div class="navbar-nav mx-0 mx-lg-auto">
+                            <a href="#home" onclick="แสดงหน้า('home'); return false;" class="nav-item nav-link active" id="navlink-home">หน้าแรก</a>
+                            <a href="#job" onclick="แสดงหน้า('job'); return false;" class="nav-item nav-link" id="navlink-job">สมัครงาน AI/ดิจิทัล</a>
+                            <a href="#training" onclick="แสดงหน้า('training'); return false;" class="nav-item nav-link" id="navlink-training">อบรม/สัมมนา</a>
+                            <a href="#certify" onclick="แสดงหน้า('certify'); return false;" class="nav-item nav-link" id="navlink-certify">สอบ Certify</a>
+                            <a href="#about" onclick="แสดงหน้า('about'); return false;" class="nav-item nav-link" id="navlink-about">เกี่ยวกับเรา</a>
+                            <div class="nav-btn px-3">
+                                <a href="#job" onclick="แสดงหน้า('job'); return false;" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> สมัครงานเลย</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- ================= หน้าแรก (page-home) ================= -->
+        <section id="page-home" class="page-section">
+
+        <!-- Carousel Start -->
+        <div class="header-carousel owl-carousel">
+            <div class="header-carousel-item bg-primary">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-7 animated fadeInLeft">
+                                <div class="text-sm-center text-md-start">
+                                    <h4 class="text-white text-uppercase fw-bold mb-4">ยินดีต้อนรับสู่ JobCert</h4>
+                                    <h1 class="display-1 text-white mb-4">สมัครงานสาย AI และดิจิทัล ได้ที่นี่</h1>
+                                    <p class="mb-5 fs-5">เว็บไซต์รวมตำแหน่งงานด้าน AI และดิจิทัล พร้อมข้อมูลอบรม สัมมนา และการสอบ Certify เพื่อพัฒนาทักษะก่อนสมัครงานจริง
+                                    </p>
+                                    <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
+                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#job" onclick="แสดงหน้า('job'); return false;"><i class="fas fa-briefcase me-2"></i> ดูตำแหน่งงาน</a>
+                                        <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#training" onclick="แสดงหน้า('training'); return false;">ดูหลักสูตรอบรม</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 animated fadeInRight">
+                                <div class="d-flex align-items-center justify-content-center" style="height: 320px;">
+                                    <img src="img/hero-ai-illustration.png" alt="AI และการสมัครงานดิจิทัล">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-carousel-item bg-primary">
+                <div class="carousel-caption">
+                    <div class="container">
+                        <div class="row gy-4 gy-lg-0 gx-0 gx-lg-5 align-items-center">
+                            <div class="col-lg-5 animated fadeInLeft">
+                                <div class="d-flex align-items-center justify-content-center" style="height: 320px;">
+                                    <img src="img/hero-certificate-illustration.png" alt="อบรมและสอบ Certify">
+                                </div>
+                            </div>
+                            <div class="col-lg-7 animated fadeInRight">
+                                <div class="text-sm-center text-md-end">
+                                    <h4 class="text-white text-uppercase fw-bold mb-4">อบรม + สอบ Certify</h4>
+                                    <h1 class="display-1 text-white mb-4">อบรมเสริมทักษะ พร้อมสอบ Certify รับใบประกาศ</h1>
+                                    <p class="mb-5 fs-5">เลือกหลักสูตรอบรมที่ตรงกับสายงาน AI และดิจิทัลที่สนใจ แล้วสมัครสอบ Certify เพื่อยืนยันความสามารถของคุณ
+                                    </p>
+                                    <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
+                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#training" onclick="แสดงหน้า('training'); return false;"><i class="fas fa-chalkboard-teacher me-2"></i> ดูหลักสูตร</a>
+                                        <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#certify" onclick="แสดงหน้า('certify'); return false;">สมัครสอบ Certify</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+        <!-- Feature Start -->
+        <div class="container-fluid feature bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">จุดเด่นของเรา</h4>
+                    <h1 class="display-4 mb-4">ครบทั้งสมัครงาน อบรม และสอบ Certify</h1>
+                    <p class="mb-0">JobCert ตั้งใจทำเว็บนี้เพื่อรวมทุกอย่างที่คนอยากทำงานสาย AI/ดิจิทัลต้องใช้ ไว้ในที่เดียว ตั้งแต่หางาน อบรมเพิ่มทักษะ จนถึงสอบวัดระดับ
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <i class="fas fa-robot fa-3x"></i>
+                            </div>
+                            <h4 class="mb-4">งานสาย AI/ดิจิทัล</h4>
+                            <p class="mb-4">รวมตำแหน่งงานด้าน AI และดิจิทัลจากหลายบริษัท คัดมาให้ตรงกับสายที่กำลังมองหา
+                            </p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#job" onclick="แสดงหน้า('job'); return false;">ดูรายละเอียด</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                            </div>
+                            <h4 class="mb-4">อบรม/สัมมนา</h4>
+                            <p class="mb-4">มีคอร์สอบรมและสัมมนาให้เลือกหลายหลักสูตร ทั้งแบบออนไลน์และแบบเข้าเรียนจริง
+                            </p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#training" onclick="แสดงหน้า('training'); return false;">ดูรายละเอียด</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <i class="fas fa-certificate fa-3x"></i>
+                            </div>
+                            <h4 class="mb-4">สอบ Certify</h4>
+                            <p class="mb-4">สมัครสอบ Certify เพื่อวัดระดับความรู้ และได้ใบประกาศไว้ยื่นตอนสมัครงาน
+                            </p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#certify" onclick="แสดงหน้า('certify'); return false;">ดูรายละเอียด</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+
+        <!-- About Start -->
+        <div class="container-fluid bg-light about pb-5">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="about-item-content bg-white rounded p-5 h-100">
+                            <h4 class="text-primary">เกี่ยวกับเรา</h4>
+                            <h1 class="display-4 mb-4">JobCert แหล่งรวมโอกาสสาย AI/ดิจิทัล</h1>
+                            <p>JobCert เกิดขึ้นเพื่อเป็นตัวกลางระหว่างคนที่อยากทำงานสาย AI และดิจิทัล กับบริษัทที่กำลังเปิดรับ พร้อมช่วยเตรียมความพร้อมก่อนสมัครงานจริง
+                            </p>
+                            <p>นอกจากประกาศงานแล้ว เรายังรวบรวมหลักสูตรอบรม สัมมนา และสนามสอบ Certify ไว้ให้ครบในที่เดียว
+                            </p>
+                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>ตำแหน่งงานอัปเดตสม่ำเสมอ</p>
+                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>หลักสูตรอบรมจากผู้เชี่ยวชาญ</p>
+                            <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>สอบ Certify ได้ใบประกาศจริง</p>
+                            <a class="btn btn-primary rounded-pill py-3 px-5" href="#job" onclick="แสดงหน้า('job'); return false;">ดูตำแหน่งงาน</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="bg-white rounded p-5 h-100">
+                            <div class="row g-4 justify-content-center">
+                                <div class="col-12 text-center">
+                                    <i class="fas fa-chart-bar text-primary mb-2" style="font-size: 48px;"></i>
+                                    <h4 class="mb-0">JobCert ในตัวเลข</h4>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="counter-item bg-light rounded p-3 h-100">
+                                        <div class="counter-counting">
+                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">129</span>
+                                            <span class="h1 fw-bold text-primary">+</span>
+                                        </div>
+                                        <h4 class="mb-0 text-dark">ตำแหน่งงานเปิดรับ</h4>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="counter-item bg-light rounded p-3 h-100">
+                                        <div class="counter-counting">
+                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">99</span>
+                                            <span class="h1 fw-bold text-primary">+</span>
+                                        </div>
+                                        <h4 class="mb-0 text-dark">หลักสูตรอบรม</h4>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="counter-item bg-light rounded p-3 h-100">
+                                        <div class="counter-counting">
+                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">556</span>
+                                            <span class="h1 fw-bold text-primary">+</span>
+                                        </div>
+                                        <h4 class="mb-0 text-dark">ผู้ผ่านสอบ Certify</h4>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="counter-item bg-light rounded p-3 h-100">
+                                        <div class="counter-counting">
+                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">967</span>
+                                            <span class="h1 fw-bold text-primary">+</span>
+                                        </div>
+                                        <h4 class="mb-0 text-dark">บริษัทพันธมิตร</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- FAQs Start -->
+        <div class="container-fluid faq-section bg-light py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="h-100">
+                            <div class="mb-5">
+                                <h4 class="text-primary">คำถามที่พบบ่อย</h4>
+                                <h1 class="display-4 mb-0">FAQ ที่คนถามบ่อยๆ</h1>
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Q: สมัครงานผ่านเว็บนี้ต้องทำยังไง?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show active" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body rounded">
+                                            A: เข้าไปที่หน้า "สมัครงาน AI/ดิจิทัล" เลือกตำแหน่งที่สนใจ แล้วกรอกฟอร์มใบสมัครด้านล่างของหน้าให้ครบ ทีมงานจะติดต่อกลับทางอีเมลหรือเบอร์โทรที่กรอกไว้
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Q: หลักสูตรอบรมมีค่าใช้จ่ายไหม?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            A: มีทั้งคอร์สฟรีและคอร์สเสียค่าใช้จ่าย ราคาและรายละเอียดจะแจ้งไว้ในหน้า "อบรม/สัมมนา" ของแต่ละคอร์สเลย
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Q: สอบ Certify ต้องเตรียมตัวยังไง?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            A: แนะนำให้เข้าอบรมในหลักสูตรที่ตรงกับวิชาที่จะสอบก่อน แล้วค่อยไปสมัครสอบที่หน้า "สอบ Certify" เลือกวิชาและวันสอบที่สะดวก
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                        <div class="d-flex align-items-center justify-content-center h-100">
+                            <img src="img/faq-illustration.png" class="img-fluid" style="max-height: 340px;" alt="คำถามที่พบบ่อย">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQs End -->
+
+        </section>
+        <!-- ================= จบหน้าแรก ================= -->
+
+        <!-- ================= หน้าสมัครงาน (page-job) ================= -->
+        <section id="page-job" class="page-section" style="display:none;">
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4">สมัครงาน AI/ดิจิทัล</h4>
+                <ol class="breadcrumb d-flex justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#home" onclick="แสดงหน้า('home'); return false;">หน้าแรก</a></li>
+                    <li class="breadcrumb-item active text-primary">สมัครงาน AI/ดิจิทัล</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- ส่วนค้นหาตำแหน่งงาน แบบมี search box เหมือนเว็บสมัครงานจริงๆ -->
+        <div class="container-fluid py-5" style="background: linear-gradient(135deg, #1E56A0, #163172);">
+            <div class="container py-4">
+                <div class="text-center mb-4">
+                    <h1 class="display-5 text-white mb-2">หางานสาย AI และดิจิทัลที่ใช่สำหรับคุณ</h1>
+                    <p class="text-white mb-0">ค้นหาจากตำแหน่ง บริษัท หรือทำเลที่สนใจได้เลย</p>
+                </div>
+                <div class="bg-white rounded-4 p-3 shadow job-search-box">
+                    <div class="row g-2 align-items-center">
+                        <div class="col-md-5">
+                            <input type="text" class="form-control border-0" id="jobSearchInput" placeholder="ชื่อตำแหน่งงาน หรือชื่อบริษัท">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control border-0" id="jobLocationInput" placeholder="ทำเล เช่น สาทร, บางนา">
+                        </div>
+                        <div class="col-md-3">
+                            <button type="button" class="btn btn-primary w-100" onclick="กรองงาน()"><i class="fas fa-search me-2"></i>ค้นหางาน</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ส่วนแสดงตำแหน่งงานที่เปิดรับ -->
+        <div class="container-fluid contact bg-light py-5">
+            <div class="container py-5">
+                <div class="row g-4">
+                    <!-- ตัวกรองงาน อยู่ทางซ้าย -->
+                    <div class="col-lg-3">
+                        <div class="bg-white rounded-4 p-4 shadow-sm">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <strong>ประเภทงาน</strong>
+                                <a href="#" class="small text-primary" onclick="ล้างตัวกรอง(); return false;">ล้างตัวกรอง</a>
+                            </div>
+                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="type_fulltime" onchange="กรองงาน()"><label class="form-check-label" for="type_fulltime">เต็มเวลา</label></div>
+                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="type_parttime" onchange="กรองงาน()"><label class="form-check-label" for="type_parttime">พาร์ทไทม์</label></div>
+                            <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="type_internship" onchange="กรองงาน()"><label class="form-check-label" for="type_internship">ฝึกงาน</label></div>
+
+                            <strong class="d-block mb-2">เงินเดือนขั้นต่ำ</strong>
+                            <input type="range" class="form-range" min="0" max="70000" step="1000" value="0" id="salaryRange" oninput="แสดงค่าเงินเดือน(); กรองงาน()">
+                            <div class="small text-muted mb-4" id="salaryRangeText">ตั้งแต่ ฿0 ขึ้นไป</div>
+
+                            <strong class="d-block mb-2">ระดับประสบการณ์</strong>
+                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="level_entry" onchange="กรองงาน()"><label class="form-check-label" for="level_entry">เริ่มต้น</label></div>
+                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="level_mid" onchange="กรองงาน()"><label class="form-check-label" for="level_mid">ปานกลาง</label></div>
+                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="level_expert" onchange="กรองงาน()"><label class="form-check-label" for="level_expert">เชี่ยวชาญ</label></div>
+                        </div>
+                    </div>
+
+                    <!-- รายการงาน อยู่ทางขวา -->
+                    <div class="col-lg-9">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+                            <h4 class="mb-0">ตำแหน่งงานแนะนำ</h4>
+                            <div class="d-flex align-items-center gap-2">
+                                <label for="jobSort" class="mb-0 small text-muted">เรียงตาม:</label>
+                                <select class="form-select form-select-sm" id="jobSort" onchange="เรียงงาน()">
+                                    <option value="recent">ล่าสุด</option>
+                                    <option value="salary">เงินเดือนสูงสุด</option>
+                                    <option value="name">ชื่อตำแหน่ง</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="jobListArea">
+                            <div class="job-list-item mb-3" data-title="AI-Assisted Web Developer" data-company="NexGen Innovations Co., Ltd." data-location="บางนา" data-type="เต็มเวลา" data-level="ปานกลาง" data-salary="70000" data-posted="2025-08-15">
+                                <div class="job-card-box">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="d-flex gap-3">
+                                            <div class="job-badge" style="background:#1E56A0;"><i class="fas fa-code"></i></div>
+                                            <div>
+                                                <div class="h5 mb-1" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#collapse_AIWebDev">AI-Assisted Web Developer</div>
+                                                <div class="small text-muted">NexGen Innovations Co., Ltd. &middot; 25 ผู้สมัคร</div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="heart-btn" onclick="กดหัวใจ(this)">&#9825;</button>
+                                    </div>
+                                    <div class="job-card-tags mt-3 mb-2">
+                                        <span class="tag-level">ปานกลาง</span>
+                                        <span class="tag-type">เต็มเวลา</span>
+                                    </div>
+                                    <p class="text-muted mb-3">พัฒนาโค้ดฝั่งหน้าบ้านด้วย HTML5/CSS3/JavaScript พร้อมใช้ AI Coding Tools ช่วยเพิ่มความเร็วและความแม่นยำในการทำงาน</p>
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                        <div class="fw-bold">40,000 - 70,000 บาท/เดือน</div>
+                                        <div class="small text-muted">ประกาศ 15-Aug-2568 &middot; บางนา / ใกล้รถไฟฟ้า</div>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-primary btn-sm mt-3" data-bs-toggle="collapse" data-bs-target="#collapse_AIWebDev">ดูรายละเอียดงาน <i class="fas fa-chevron-down ms-1"></i></button>
+                                </div>
+                                <div id="collapse_AIWebDev" class="collapse">
+                                    <div class="job-detail-box">
+                                        <p>NexGen Innovations is looking for a talented Frontend Developer who is highly proficient in modern web technologies (HTML5, CSS3, JavaScript) and enthusiastic about adopting AI Coding Tools (such as GitHub Copilot, Cursor, ChatGPT, Claude, V0) to exponentially boost coding speed, accuracy, and workflow efficiency. You will collaborate with our design and backend teams to build stunning, responsive, and seamless user experiences.</p>
+                                        <h5 class="text-primary mt-4">Key responsibilities</h5>
+                                        <ul>
+                                            <li>Design and write clean, high-performance client-side code using HTML5, CSS3, and ES6+ JavaScript, translating Figma designs into interactive interfaces.</li>
+                                            <li>Leverage AI coding assistants across all phases (generation, debugging, refactoring, and unit testing) to reduce repetitive tasks and optimize development cycles.</li>
+                                            <li>Develop fully responsive layouts for mobile, tablet, and desktop, adhering to WCAG accessibility standards.</li>
+                                            <li>Partner with Backend Developers to consume APIs via JSON, and sync with PM and QA teams to maintain code standards.</li>
+                                            <li>Optimize assets and web architectures to maximize page speed and achieve a Lighthouse Performance Score of 85+.</li>
+                                            <li>Diagnose, debug, and resolve cross-browser compatibility issues to keep frontend applications modern and stable.</li>
+                                        </ul>
+                                        <h5 class="text-primary mt-4">What we would like to see</h5>
+                                        <ul>
+                                            <li>Bachelor's degree in Computer Engineering, Computer Science, IT, or equivalent experience with a stellar web development portfolio.</li>
+                                            <li>Advanced proficiency in HTML5, CSS3, and JavaScript (Vanilla & ES6+).</li>
+                                            <li>Familiarity with modern CSS Frameworks (e.g., Tailwind CSS, Bootstrap).</li>
+                                            <li>Mastery of AI-powered development tools (e.g., GitHub Copilot, Cursor, Tabnine, ChatGPT, Claude).</li>
+                                            <li>Strong understanding of Git version control and collaborative platforms like GitHub or GitLab.</li>
+                                            <li>A proactive mindset with a strong passion for integrating AI into daily engineering workflows.</li>
+                                            <li>Strong team player with good communication and analytical troubleshooting skills.</li>
+                                        </ul>
+                                        <h5 class="text-primary mt-4">Salary range and compensation</h5>
+                                        <p>40,000 - 70,000 THB/monthly depending on skills and experience</p>
+                                        <h5 class="text-primary mt-4">Benefits</h5>
+                                        <ul>
+                                            <li>Free Pro licenses for essential AI tools (GitHub Copilot, Cursor Pro, ChatGPT Plus, etc.)</li>
+                                            <li>Premium health and dental insurance</li>
+                                            <li>Education allowance for tech and skill development courses</li>
+                                            <li>Retirement plan (provident fund) with special company matching rates</li>
+                                            <li>Activity areas, fitness classes, and corporate sports club access</li>
+                                        </ul>
+                                        <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงฟอร์ม('form_AIWebDev')">สมัครตำแหน่งนี้</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="job-list-item mb-3" data-title="Digital & AI Transformation Associate" data-company="Siam Smart Solution Co., Ltd." data-location="สาทร" data-type="เต็มเวลา" data-level="ปานกลาง" data-salary="50000" data-posted="2025-08-15">
+                                <div class="job-card-box">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="d-flex gap-3">
+                                            <div class="job-badge" style="background:#163172;"><i class="fas fa-project-diagram"></i></div>
+                                            <div>
+                                                <div class="h5 mb-1" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#collapse_DigitalTransform">Digital & AI Transformation Associate</div>
+                                                <div class="small text-muted">Siam Smart Solution Co., Ltd. &middot; 18 ผู้สมัคร</div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="heart-btn" onclick="กดหัวใจ(this)">&#9825;</button>
+                                    </div>
+                                    <div class="job-card-tags mt-3 mb-2">
+                                        <span class="tag-level">ปานกลาง</span>
+                                        <span class="tag-type">เต็มเวลา</span>
+                                    </div>
+                                    <p class="text-muted mb-3">วิเคราะห์ขั้นตอนการทำงานขององค์กร แล้วนำเครื่องมือ AI/No-Code มาช่วยให้กระบวนการเร็วและแม่นยำขึ้น</p>
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                        <div class="fw-bold">30,000 - 50,000 บาท/เดือน</div>
+                                        <div class="small text-muted">ประกาศ 15-Aug-2568 &middot; สาทร / กรุงเทพฯ</div>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-primary btn-sm mt-3" data-bs-toggle="collapse" data-bs-target="#collapse_DigitalTransform">ดูรายละเอียดงาน <i class="fas fa-chevron-down ms-1"></i></button>
+                                </div>
+                                <div id="collapse_DigitalTransform" class="collapse">
+                                    <div class="job-detail-box">
+                                        <p>Siam Smart Solution is looking to recruit a Digital & AI Transformation Associate to join our team in the heart of Bangkok (Sathorn). In this role, you will analyze existing workflows across various departments and identify opportunities to introduce No-Code/Low-Code AI automation tools, making business processes faster, highly accurate, and exponentially more efficient.</p>
+                                        <h5 class="text-primary mt-4">Key responsibilities</h5>
+                                        <ul>
+                                            <li>Audit traditional business workflows and design new, AI-driven processes that eliminate manual and redundant steps.</li>
+                                            <li>Build and connect automated workflows using No-Code/Low-Code platforms (such as Zapier, Make.com, Microsoft Power Automate, etc.).</li>
+                                            <li>Gather, clean, and analyze data using AI models, creating intuitive dashboards (Power BI, Tableau, Google Sheets) for management decision-making.</li>
+                                            <li>Conduct workshops, training sessions, and produce internal documentation to foster an AI-ready culture and improve AI literacy.</li>
+                                            <li>Ensure all AI integrations protect user privacy and strictly comply with Thailand's PDPA and ethical AI frameworks.</li>
+                                            <li>Monitor implementation progress, calculate estimated ROI, and present transformation reports to executives.</li>
+                                        </ul>
+                                        <h5 class="text-primary mt-4">What we would like to see</h5>
+                                        <ul>
+                                            <li>Bachelor's degree in Business Administration, MIS, Data Science, Engineering, or related fields with a strong interest in digital technologies.</li>
+                                            <li>Solid understanding of applied AI, Generative AI tools, and AI literacy.</li>
+                                            <li>Proficiency in No-Code/Low-Code Automation Tools (Zapier, Make, Power Automate, etc.).</li>
+                                            <li>Competency in data analysis tools (Advanced Excel, Google Sheets, Power BI, or Tableau).</li>
+                                            <li>Growth mindset, adaptability, and change management skills.</li>
+                                            <li>Outstanding presentation and communication skills with the ability to explain complex tech concepts in simple terms.</li>
+                                            <li>Strong awareness of ethical AI practices and PDPA regulations.</li>
+                                        </ul>
+                                        <h5 class="text-primary mt-4">Salary range and compensation</h5>
+                                        <p>30,000 - 50,000 THB/monthly depending on skills and experience</p>
+                                        <h5 class="text-primary mt-4">Benefits</h5>
+                                        <ul>
+                                            <li>High-performance workspace equipment (MacBook or equivalent high-spec laptop)</li>
+                                            <li>Unlimited learning budget on platforms like Coursera, Udemy, and top global institutions</li>
+                                            <li>Fully sponsored tickets to national tech, innovation, and AI summits</li>
+                                            <li>Comprehensive health insurance and annual check-ups</li>
+                                            <li>Travel and fuel allowance for corporate client visits</li>
+                                        </ul>
+                                        <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงฟอร์ม('form_DigitalTransform')">สมัครตำแหน่งนี้</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="job-list-item mb-3" data-title="AI Data Analyst (Entry Level)" data-company="BrightWave Digital Co., Ltd." data-location="อารีย์" data-type="เต็มเวลา" data-level="เริ่มต้น" data-salary="32000" data-posted="2025-08-15">
+                                <div class="job-card-box">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div class="d-flex gap-3">
+                                            <div class="job-badge" style="background:#1E56A0;"><i class="fas fa-chart-line"></i></div>
+                                            <div>
+                                                <div class="h5 mb-1" style="cursor:pointer;" data-bs-toggle="collapse" data-bs-target="#collapse_AIDataAnalyst">AI Data Analyst (Entry Level)</div>
+                                                <div class="small text-muted">BrightWave Digital Co., Ltd. &middot; 12 ผู้สมัคร</div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="heart-btn" onclick="กดหัวใจ(this)">&#9825;</button>
+                                    </div>
+                                    <div class="job-card-tags mt-3 mb-2">
+                                        <span class="tag-level">เริ่มต้น</span>
+                                        <span class="tag-type">เต็มเวลา</span>
+                                    </div>
+                                    <p class="text-muted mb-3">เก็บและวิเคราะห์ข้อมูลด้วยเครื่องมือ AI ช่วยงาน ทำแดชบอร์ดง่ายๆ สนับสนุนทีมการตลาดและผลิตภัณฑ์</p>
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                        <div class="fw-bold">22,000 - 32,000 บาท/เดือน</div>
+                                        <div class="small text-muted">ประกาศ 15-Aug-2568 &middot; อารีย์ / กรุงเทพฯ (ใกล้ BTS อารีย์)</div>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-primary btn-sm mt-3" data-bs-toggle="collapse" data-bs-target="#collapse_AIDataAnalyst">ดูรายละเอียดงาน <i class="fas fa-chevron-down ms-1"></i></button>
+                                </div>
+                                <div id="collapse_AIDataAnalyst" class="collapse">
+                                    <div class="job-detail-box">
+                                        <p>BrightWave Digital is looking for an enthusiastic Data Analyst who is eager to apply AI-assisted analytics tools to turn raw data into actionable business insights. You will work closely with the marketing and product teams to support data-driven decision making.</p>
+                                        <h5 class="text-primary mt-4">Key responsibilities</h5>
+                                        <ul>
+                                            <li>Collect, clean, and organize data from multiple sources using Excel, Google Sheets, and SQL.</li>
+                                            <li>Use AI-powered analytics tools (such as ChatGPT, Claude, or Power BI Copilot) to speed up data analysis and reporting.</li>
+                                            <li>Build simple dashboards and visualizations to present findings to non-technical stakeholders.</li>
+                                            <li>Support A/B testing and campaign performance tracking for the digital marketing team.</li>
+                                            <li>Document data processes and maintain data quality standards.</li>
+                                        </ul>
+                                        <h5 class="text-primary mt-4">What we would like to see</h5>
+                                        <ul>
+                                            <li>Bachelor's degree in Statistics, Computer Science, Business Analytics, or related fields (recent graduates welcome).</li>
+                                            <li>Basic knowledge of SQL, Excel, or Google Sheets.</li>
+                                            <li>Interest in AI tools and willingness to learn new analytics technologies quickly.</li>
+                                            <li>Good attention to detail and logical thinking.</li>
+                                            <li>Strong communication skills in Thai and basic English.</li>
+                                        </ul>
+                                        <h5 class="text-primary mt-4">Salary range and compensation</h5>
+                                        <p>22,000 - 32,000 THB/monthly depending on skills and experience</p>
+                                        <h5 class="text-primary mt-4">Benefits</h5>
+                                        <ul>
+                                            <li>On-the-job training with senior data analysts and AI tool mentorship</li>
+                                            <li>Social security and group health insurance</li>
+                                            <li>Flexible working hours and hybrid work options</li>
+                                            <li>Annual performance bonus</li>
+                                        </ul>
+                                        <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงฟอร์ม('form_AIDataAnalyst')">สมัครตำแหน่งนี้</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted small mt-2" id="noJobFound" style="display:none;">ไม่พบตำแหน่งงานที่ตรงกับตัวกรองที่เลือก ลองล้างตัวกรองดูนะ</p>
+                    </div>
+                </div>
+
+                <!-- ฟอร์มใบสมัครงาน แยกฟอร์มของใครของมัน จะได้ไม่งงว่ากำลังสมัครตำแหน่งไหนอยู่ -->
+                <div class="row justify-content-center mt-4">
+                    <div class="col-xl-8 jobform" id="form_AIWebDev" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#jobListArea" onclick="ซ่อนฟอร์มงานทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกตำแหน่งอื่น</a>
+                            <h4 class="text-primary">ใบสมัครงาน</h4>
+                            <h1 class="display-5 mb-0">สมัครตำแหน่ง: AI-Assisted Web Developer</h1>
+                            <p class="text-muted mb-0">NexGen Innovations Co., Ltd.</p>
+                        </div>
+                        <form onsubmit="return เช็คฟอร์ม_AIWebDev()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="AIWebDev_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="AIWebDev_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="AIWebDev_email" placeholder="อีเมล">
+                                        <label for="AIWebDev_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="AIWebDev_phone" placeholder="เบอร์โทร">
+                                        <label for="AIWebDev_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <select class="form-select border-0" id="AIWebDev_exp">
+                                            <option value="">-- เลือกระดับ --</option>
+                                            <option value="จบใหม่">จบใหม่ / ไม่มีประสบการณ์</option>
+                                            <option value="1-3 ปี">1-3 ปี</option>
+                                            <option value="3 ปีขึ้นไป">3 ปีขึ้นไป</option>
+                                        </select>
+                                        <label for="AIWebDev_exp">ระดับประสบการณ์</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control border-0" id="AIWebDev_resume">
+                                        <label for="AIWebDev_resume">แนบไฟล์เรซูเม่ (PDF)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0" placeholder="ข้อความเพิ่มเติม" id="AIWebDev_message" style="height: 120px"></textarea>
+                                        <label for="AIWebDev_message">ข้อความเพิ่มเติม (ถ้ามี)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">ส่งใบสมัคร</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 jobform" id="form_DigitalTransform" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#jobListArea" onclick="ซ่อนฟอร์มงานทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกตำแหน่งอื่น</a>
+                            <h4 class="text-primary">ใบสมัครงาน</h4>
+                            <h1 class="display-5 mb-0">สมัครตำแหน่ง: Digital & AI Transformation Associate</h1>
+                            <p class="text-muted mb-0">Siam Smart Solution Co., Ltd.</p>
+                        </div>
+                        <form onsubmit="return เช็คฟอร์ม_DigitalTransform()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="DigitalTransform_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="DigitalTransform_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="DigitalTransform_email" placeholder="อีเมล">
+                                        <label for="DigitalTransform_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="DigitalTransform_phone" placeholder="เบอร์โทร">
+                                        <label for="DigitalTransform_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <select class="form-select border-0" id="DigitalTransform_exp">
+                                            <option value="">-- เลือกระดับ --</option>
+                                            <option value="จบใหม่">จบใหม่ / ไม่มีประสบการณ์</option>
+                                            <option value="1-3 ปี">1-3 ปี</option>
+                                            <option value="3 ปีขึ้นไป">3 ปีขึ้นไป</option>
+                                        </select>
+                                        <label for="DigitalTransform_exp">ระดับประสบการณ์</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control border-0" id="DigitalTransform_resume">
+                                        <label for="DigitalTransform_resume">แนบไฟล์เรซูเม่ (PDF)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0" placeholder="ข้อความเพิ่มเติม" id="DigitalTransform_message" style="height: 120px"></textarea>
+                                        <label for="DigitalTransform_message">ข้อความเพิ่มเติม (ถ้ามี)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">ส่งใบสมัคร</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 jobform" id="form_AIDataAnalyst" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#jobListArea" onclick="ซ่อนฟอร์มงานทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกตำแหน่งอื่น</a>
+                            <h4 class="text-primary">ใบสมัครงาน</h4>
+                            <h1 class="display-5 mb-0">สมัครตำแหน่ง: AI Data Analyst (Entry Level)</h1>
+                            <p class="text-muted mb-0">BrightWave Digital Co., Ltd.</p>
+                        </div>
+                        <form onsubmit="return เช็คฟอร์ม_AIDataAnalyst()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="AIDataAnalyst_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="AIDataAnalyst_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="AIDataAnalyst_email" placeholder="อีเมล">
+                                        <label for="AIDataAnalyst_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="AIDataAnalyst_phone" placeholder="เบอร์โทร">
+                                        <label for="AIDataAnalyst_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <select class="form-select border-0" id="AIDataAnalyst_exp">
+                                            <option value="">-- เลือกระดับ --</option>
+                                            <option value="จบใหม่">จบใหม่ / ไม่มีประสบการณ์</option>
+                                            <option value="1-3 ปี">1-3 ปี</option>
+                                            <option value="3 ปีขึ้นไป">3 ปีขึ้นไป</option>
+                                        </select>
+                                        <label for="AIDataAnalyst_exp">ระดับประสบการณ์</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control border-0" id="AIDataAnalyst_resume">
+                                        <label for="AIDataAnalyst_resume">แนบไฟล์เรซูเม่ (PDF)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0" placeholder="ข้อความเพิ่มเติม" id="AIDataAnalyst_message" style="height: 120px"></textarea>
+                                        <label for="AIDataAnalyst_message">ข้อความเพิ่มเติม (ถ้ามี)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">ส่งใบสมัคร</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- จบส่วนสมัครงาน -->
+
+        </section>
+        <!-- ================= จบหน้าสมัครงาน ================= -->
+
+        <!-- ================= หน้าอบรม/สัมมนา (page-training) ================= -->
+        <section id="page-training" class="page-section" style="display:none;">
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4">อบรม/สัมมนา</h4>
+                <ol class="breadcrumb d-flex justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#home" onclick="แสดงหน้า('home'); return false;">หน้าแรก</a></li>
+                    <li class="breadcrumb-item active text-primary">อบรม/สัมมนา</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- ส่วนแสดงหลักสูตรอบรม/สัมมนา -->
+        <div class="container-fluid contact bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5" style="max-width: 800px;">
+                    <h4 class="text-primary">หลักสูตรอบรม/สัมมนา</h4>
+                    <h1 class="display-4 mb-4">เลือกคอร์สที่สนใจแล้วลงทะเบียนได้เลย</h1>
+                    <p>กดที่หัวข้อคอร์สเพื่อดูรายละเอียดแบบเต็ม แล้วกดปุ่ม "ลงทะเบียนคอร์สนี้" เพื่อกรอกฟอร์ม (จัดกลุ่มตามกรอบสมรรถนะ AI 4 มิติ)</p>
+                </div>
+
+                <div class="accordion mb-5" id="courseAccordion">
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="cheading_GenAIFoundations">
+                            <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#ccollapse_GenAIFoundations" aria-expanded="true" aria-controls="ccollapse_GenAIFoundations">
+                                <div>
+                                    <div class="text-primary mb-1"><i class="fas fa-robot me-2"></i>Generative AI Foundations & Prompt Engineering Masterclass</div>
+                                    <div class="small text-muted">18 ชั่วโมงเต็ม เพียง 4,500 บาท &middot; มิติ: Techniques & Applications</div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="ccollapse_GenAIFoundations" class="accordion-collapse collapse show" aria-labelledby="cheading_GenAIFoundations" data-bs-parent="#courseAccordion">
+                            <div class="accordion-body">
+                                <h5 class="text-primary">สิ่งที่ผู้อบรมจะได้รับ</h5>
+                                <p>ผู้จบหลักสูตรจะมีความเข้าใจในโครงสร้างของ Large Language Models (LLM) ทั้งระบบ ตลอดจนเทคนิคการสั่งการ Prompt ขั้นสูงในรูปแบบต่างๆ เช่น Few-Shot Prompting, Chain-of-Thought (CoT) เพื่อให้สามารถสั่งการปัญญาประดิษฐ์ในการสร้างสรรค์เนื้อหา วิเคราะห์ข้อมูล สรุปเอกสาร รายงานการประชุม ตลอดจนการตรวจสอบและประเมินผลลัพธ์ของ AI ได้อย่างมีประสิทธิภาพสูงสุด พร้อมรับ Digital Certificate เพื่อใช้ยื่นประกอบการสมัครงานในสายงานด้าน AI</p>
+                                <p class="small text-muted mb-2">ข้อมูลอ้างอิงจาก ai-passport.com</p>
+                                <button type="button" class="btn btn-link p-0 mb-3" data-bs-toggle="collapse" data-bs-target="#more_GenAIFoundations">ดูรายละเอียดเพิ่มเติม <i class="fas fa-chevron-down ms-1"></i></button>
+                                <div class="collapse mb-3" id="more_GenAIFoundations">
+                                    <p class="mb-1"><strong>เหมาะกับใคร:</strong> ผู้ที่ต้องการนำ AI มาใช้งานจริงในสายอาชีพ ทั้งสายเทคนิคและสายธุรกิจ</p>
+                                    <p class="mb-1"><strong>รูปแบบการเรียน:</strong> เรียนออนไลน์ พร้อม Workshop ลงมือทำจริง</p>
+                                    <p class="mb-0"><strong>สิ่งที่ต้องเตรียม:</strong> โน้ตบุ๊กส่วนตัว และบัญชี ChatGPT หรือ Claude (ใช้แบบฟรีเรียนได้)</p>
+                                </div>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_GenAIFoundations')">ลงทะเบียนคอร์สนี้</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="cheading_MultimodalGenAI">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccollapse_MultimodalGenAI" aria-expanded="false" aria-controls="ccollapse_MultimodalGenAI">
+                                <div>
+                                    <div class="text-primary mb-1"><i class="fas fa-photo-video me-2"></i>Multimodal Generative AI for Business & Creative Content</div>
+                                    <div class="small text-muted">15 ชั่วโมงเต็ม เพียง 3,900 บาท &middot; มิติ: Techniques & Applications</div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="ccollapse_MultimodalGenAI" class="accordion-collapse collapse " aria-labelledby="cheading_MultimodalGenAI" data-bs-parent="#courseAccordion">
+                            <div class="accordion-body">
+                                <h5 class="text-primary">สิ่งที่ผู้อบรมจะได้รับ</h5>
+                                <p>ผู้จบหลักสูตรจะสามารถประยุกต์ใช้ปัญญาประดิษฐ์แบบผสมผสาน (Multimodal AI) ในการสร้างสรรค์และประมวลผลสื่อรูปแบบต่างๆ ทั้งข้อความ ภาพ เสียง และวิดีโอ เพื่อเพิ่มมูลค่าเชิงธุรกิจและการตลาดดิจิทัล สามารถใช้ AI ในการวางแผนแคมเปญ สร้างภาพกราฟิกตัดต่อ และสร้างเนื้อหาวิดีโอประชาสัมพันธ์ได้อย่างเป็นมืออาชีพเพื่อยกระดับงานครีเอทีฟ</p>
+                                <p class="small text-muted mb-2">ข้อมูลอ้างอิงจาก ai-passport.com</p>
+                                <button type="button" class="btn btn-link p-0 mb-3" data-bs-toggle="collapse" data-bs-target="#more_MultimodalGenAI">ดูรายละเอียดเพิ่มเติม <i class="fas fa-chevron-down ms-1"></i></button>
+                                <div class="collapse mb-3" id="more_MultimodalGenAI">
+                                    <p class="mb-1"><strong>เหมาะกับใคร:</strong> นักการตลาด ครีเอทีฟ และเจ้าของธุรกิจที่อยากใช้ AI สร้างคอนเทนต์</p>
+                                    <p class="mb-1"><strong>รูปแบบการเรียน:</strong> เรียนออนไลน์ พร้อมตัวอย่างเคสจริงจากธุรกิจ</p>
+                                    <p class="mb-0"><strong>สิ่งที่ต้องเตรียม:</strong> โน้ตบุ๊กส่วนตัว และบัญชีเครื่องมือ Generative AI ด้านภาพ/วิดีโอ (มีแบบฟรีให้ทดลองใช้)</p>
+                                </div>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_MultimodalGenAI')">ลงทะเบียนคอร์สนี้</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="cheading_DataAnalysisBasic">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccollapse_DataAnalysisBasic" aria-expanded="false" aria-controls="ccollapse_DataAnalysisBasic">
+                                <div>
+                                    <div class="text-primary mb-1"><i class="fas fa-chart-line me-2"></i>Data Analysis เบื้องต้น</div>
+                                    <div class="small text-muted">12 ชั่วโมงเต็ม เพียง 1,500 บาท &middot; มิติ: Techniques & Applications</div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="ccollapse_DataAnalysisBasic" class="accordion-collapse collapse " aria-labelledby="cheading_DataAnalysisBasic" data-bs-parent="#courseAccordion">
+                            <div class="accordion-body">
+                                <h5 class="text-primary">สิ่งที่ผู้อบรมจะได้รับ</h5>
+                                <p>ผู้จบหลักสูตรจะสามารถใช้เครื่องมือ AI ช่วยทำความสะอาดข้อมูล วิเคราะห์แนวโน้ม และสร้างรายงานสรุปที่นำไปใช้ตัดสินใจทางธุรกิจได้จริง เหมาะกับผู้เริ่มต้นที่ไม่มีพื้นฐานสาย Data มาก่อน</p>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_DataAnalysisBasic')">ลงทะเบียนคอร์สนี้</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="cheading_CybersecurityBasic">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccollapse_CybersecurityBasic" aria-expanded="false" aria-controls="ccollapse_CybersecurityBasic">
+                                <div>
+                                    <div class="text-primary mb-1"><i class="fas fa-shield-alt me-2"></i>Cybersecurity พื้นฐาน</div>
+                                    <div class="small text-muted">10 ชั่วโมงเต็ม เพียง 1,200 บาท &middot; มิติ: Ethics of AI</div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="ccollapse_CybersecurityBasic" class="accordion-collapse collapse " aria-labelledby="cheading_CybersecurityBasic" data-bs-parent="#courseAccordion">
+                            <div class="accordion-body">
+                                <h5 class="text-primary">สิ่งที่ผู้อบรมจะได้รับ</h5>
+                                <p>ผู้จบหลักสูตรจะเข้าใจความเสี่ยงด้านความปลอดภัยไซเบอร์ที่มาพร้อมกับการใช้ AI ในองค์กร รวมถึงแนวทางปฏิบัติตาม PDPA และหลักจริยธรรมในการใช้ข้อมูลผู้ใช้อย่างรับผิดชอบ</p>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_CybersecurityBasic')">ลงทะเบียนคอร์สนี้</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="cheading_UXUIWorkshop">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccollapse_UXUIWorkshop" aria-expanded="false" aria-controls="ccollapse_UXUIWorkshop">
+                                <div>
+                                    <div class="text-primary mb-1"><i class="fas fa-pencil-ruler me-2"></i>UX/UI Design Workshop</div>
+                                    <div class="small text-muted">14 ชั่วโมงเต็ม เพียง 1,800 บาท &middot; มิติ: Human-Centered Mindset</div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="ccollapse_UXUIWorkshop" class="accordion-collapse collapse " aria-labelledby="cheading_UXUIWorkshop" data-bs-parent="#courseAccordion">
+                            <div class="accordion-body">
+                                <h5 class="text-primary">สิ่งที่ผู้อบรมจะได้รับ</h5>
+                                <p>ผู้จบหลักสูตรจะออกแบบหน้าตาแอปพลิเคชันและเว็บไซต์โดยยึดผู้ใช้งานเป็นศูนย์กลาง (Human-Centered Design) พร้อมนำเครื่องมือ AI มาช่วยร่างดีไซน์และทดสอบการใช้งานได้เร็วขึ้น</p>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_UXUIWorkshop')">ลงทะเบียนคอร์สนี้</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3">
+                        <h2 class="accordion-header" id="cheading_PythonBasic">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ccollapse_PythonBasic" aria-expanded="false" aria-controls="ccollapse_PythonBasic">
+                                <div>
+                                    <div class="text-primary mb-1"><i class="fab fa-python me-2"></i>Python เขียนโปรแกรมเบื้องต้น</div>
+                                    <div class="small text-muted">16 ชั่วโมงเต็ม เพียง 1,500 บาท &middot; มิติ: AI System Design</div>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="ccollapse_PythonBasic" class="accordion-collapse collapse " aria-labelledby="cheading_PythonBasic" data-bs-parent="#courseAccordion">
+                            <div class="accordion-body">
+                                <h5 class="text-primary">สิ่งที่ผู้อบรมจะได้รับ</h5>
+                                <p>ผู้จบหลักสูตรจะเขียนโปรแกรม Python พื้นฐานได้ และเข้าใจแนวคิดการออกแบบระบบเล็กๆ ที่เชื่อมต่อกับโมเดล AI ผ่าน API เพื่อต่อยอดเป็นระบบอัตโนมัติในงานจริง</p>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_PythonBasic')">ลงทะเบียนคอร์สนี้</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ฟอร์มลงทะเบียนอบรม แยกฟอร์มของใครของมัน จะได้ไม่งงว่ากำลังลงคอร์สไหนอยู่ -->
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 courseform" id="form_GenAIFoundations" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <h4 class="text-primary">ลงทะเบียนอบรม</h4>
+                            <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: Generative AI Foundations & Prompt Engineering Masterclass</h1>
+                        </div>
+                        <form onsubmit="return เช็คคอร์ส_GenAIFoundations()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="GenAIFoundations_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="GenAIFoundations_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="GenAIFoundations_email" placeholder="อีเมล">
+                                        <label for="GenAIFoundations_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="GenAIFoundations_phone" placeholder="เบอร์โทร">
+                                        <label for="GenAIFoundations_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="number" min="1" class="form-control border-0" id="GenAIFoundations_count" placeholder="จำนวนผู้เข้าร่วม">
+                                        <label for="GenAIFoundations_count">จำนวนผู้เข้าร่วม (คน)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">ลงทะเบียน</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 courseform" id="form_MultimodalGenAI" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <h4 class="text-primary">ลงทะเบียนอบรม</h4>
+                            <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: Multimodal Generative AI for Business & Creative Content</h1>
+                        </div>
+                        <form onsubmit="return เช็คคอร์ส_MultimodalGenAI()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="MultimodalGenAI_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="MultimodalGenAI_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="MultimodalGenAI_email" placeholder="อีเมล">
+                                        <label for="MultimodalGenAI_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="MultimodalGenAI_phone" placeholder="เบอร์โทร">
+                                        <label for="MultimodalGenAI_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="number" min="1" class="form-control border-0" id="MultimodalGenAI_count" placeholder="จำนวนผู้เข้าร่วม">
+                                        <label for="MultimodalGenAI_count">จำนวนผู้เข้าร่วม (คน)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">ลงทะเบียน</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 courseform" id="form_DataAnalysisBasic" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <h4 class="text-primary">ลงทะเบียนอบรม</h4>
+                            <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: Data Analysis เบื้องต้น</h1>
+                        </div>
+                        <form onsubmit="return เช็คคอร์ส_DataAnalysisBasic()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="DataAnalysisBasic_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="DataAnalysisBasic_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="DataAnalysisBasic_email" placeholder="อีเมล">
+                                        <label for="DataAnalysisBasic_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="DataAnalysisBasic_phone" placeholder="เบอร์โทร">
+                                        <label for="DataAnalysisBasic_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="number" min="1" class="form-control border-0" id="DataAnalysisBasic_count" placeholder="จำนวนผู้เข้าร่วม">
+                                        <label for="DataAnalysisBasic_count">จำนวนผู้เข้าร่วม (คน)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">ลงทะเบียน</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 courseform" id="form_CybersecurityBasic" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <h4 class="text-primary">ลงทะเบียนอบรม</h4>
+                            <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: Cybersecurity พื้นฐาน</h1>
+                        </div>
+                        <form onsubmit="return เช็คคอร์ส_CybersecurityBasic()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="CybersecurityBasic_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="CybersecurityBasic_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="CybersecurityBasic_email" placeholder="อีเมล">
+                                        <label for="CybersecurityBasic_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="CybersecurityBasic_phone" placeholder="เบอร์โทร">
+                                        <label for="CybersecurityBasic_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="number" min="1" class="form-control border-0" id="CybersecurityBasic_count" placeholder="จำนวนผู้เข้าร่วม">
+                                        <label for="CybersecurityBasic_count">จำนวนผู้เข้าร่วม (คน)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">ลงทะเบียน</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 courseform" id="form_UXUIWorkshop" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <h4 class="text-primary">ลงทะเบียนอบรม</h4>
+                            <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: UX/UI Design Workshop</h1>
+                        </div>
+                        <form onsubmit="return เช็คคอร์ส_UXUIWorkshop()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="UXUIWorkshop_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="UXUIWorkshop_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="UXUIWorkshop_email" placeholder="อีเมล">
+                                        <label for="UXUIWorkshop_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="UXUIWorkshop_phone" placeholder="เบอร์โทร">
+                                        <label for="UXUIWorkshop_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="number" min="1" class="form-control border-0" id="UXUIWorkshop_count" placeholder="จำนวนผู้เข้าร่วม">
+                                        <label for="UXUIWorkshop_count">จำนวนผู้เข้าร่วม (คน)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">ลงทะเบียน</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 courseform" id="form_PythonBasic" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <h4 class="text-primary">ลงทะเบียนอบรม</h4>
+                            <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: Python เขียนโปรแกรมเบื้องต้น</h1>
+                        </div>
+                        <form onsubmit="return เช็คคอร์ส_PythonBasic()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="PythonBasic_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="PythonBasic_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="PythonBasic_email" placeholder="อีเมล">
+                                        <label for="PythonBasic_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="PythonBasic_phone" placeholder="เบอร์โทร">
+                                        <label for="PythonBasic_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="number" min="1" class="form-control border-0" id="PythonBasic_count" placeholder="จำนวนผู้เข้าร่วม">
+                                        <label for="PythonBasic_count">จำนวนผู้เข้าร่วม (คน)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">ลงทะเบียน</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- จบส่วนอบรม -->
+
+        </section>
+        <!-- ================= จบหน้าอบรม/สัมมนา ================= -->
+
+        <!-- ================= หน้าสอบ Certify (page-certify) ================= -->
+        <section id="page-certify" class="page-section" style="display:none;">
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4">สอบ Certify</h4>
+                <ol class="breadcrumb d-flex justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#home" onclick="แสดงหน้า('home'); return false;">หน้าแรก</a></li>
+                    <li class="breadcrumb-item active text-primary">สอบ Certify</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- ส่วนแสดงวิชาที่เปิดสอบ Certify -->
+        <div class="container-fluid contact bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5" style="max-width: 800px;">
+                    <h4 class="text-primary">สอบ Certify</h4>
+                    <h1 class="display-4 mb-4">เลือกวิชาที่จะสอบ แล้วสมัครสอบได้เลย</h1>
+                    <p>กดปุ่ม "สมัครสอบวิชานี้" จะมีฟอร์มของวิชานั้นโผล่มาให้กรอกเลย ไม่ต้องเลือกวิชาซ้ำอีกรอบ</p>
+                </div>
+
+                <!-- รายการวิชาสอบ certify -->
+                <div class="row g-4 mb-5" id="certify-list">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="contact-add-item h-100">
+                            <div class="cert-image-placeholder mb-3">
+                                <img src="img/cert-ai-fundamentals.png" class="w-100 h-100" style="object-fit:cover;" alt="AI Fundamentals Certificate">
+                            </div>
+                            <div class="contact-icon text-primary mb-3">
+                                <i class="fas fa-certificate fa-2x"></i>
+                            </div>
+                            <h4>AI Fundamentals Certificate</h4>
+                            <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 15 ต.ค. 2569</p>
+                            <p class="mb-1"><i class="fas fa-laptop text-primary me-2"></i>สอบแบบออนไลน์</p>
+                            <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 500 บาท</p>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_AIFundamentals')">สมัครสอบวิชานี้</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="contact-add-item h-100">
+                            <div class="cert-image-placeholder mb-3">
+                                <img src="img/cert-data-science.png" class="w-100 h-100" style="object-fit:cover;" alt="Data Science Certificate">
+                            </div>
+                            <div class="contact-icon text-primary mb-3">
+                                <i class="fas fa-certificate fa-2x"></i>
+                            </div>
+                            <h4>Data Science Certificate</h4>
+                            <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 22 ต.ค. 2569</p>
+                            <p class="mb-1"><i class="fas fa-map-marker-alt text-primary me-2"></i>สอบ Onsite กรุงเทพฯ</p>
+                            <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 800 บาท</p>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_DataScienceCert')">สมัครสอบวิชานี้</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="contact-add-item h-100">
+                            <div class="cert-image-placeholder mb-3">
+                                <img src="img/cert-digital-marketing.png" class="w-100 h-100" style="object-fit:cover;" alt="Digital Marketing Certificate">
+                            </div>
+                            <div class="contact-icon text-primary mb-3">
+                                <i class="fas fa-certificate fa-2x"></i>
+                            </div>
+                            <h4>Digital Marketing Certificate</h4>
+                            <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 29 ต.ค. 2569</p>
+                            <p class="mb-1"><i class="fas fa-laptop text-primary me-2"></i>สอบแบบออนไลน์</p>
+                            <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 400 บาท</p>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_DigitalMarketingCert')">สมัครสอบวิชานี้</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="contact-add-item h-100">
+                            <div class="cert-image-placeholder mb-3">
+                                <img src="img/cert-cybersecurity.png" class="w-100 h-100" style="object-fit:cover;" alt="Cybersecurity Certificate">
+                            </div>
+                            <div class="contact-icon text-primary mb-3">
+                                <i class="fas fa-certificate fa-2x"></i>
+                            </div>
+                            <h4>Cybersecurity Certificate</h4>
+                            <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 5 พ.ย. 2569</p>
+                            <p class="mb-1"><i class="fas fa-laptop text-primary me-2"></i>สอบแบบออนไลน์</p>
+                            <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 700 บาท</p>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_CybersecurityCert')">สมัครสอบวิชานี้</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="contact-add-item h-100">
+                            <div class="cert-image-placeholder mb-3">
+                                <img src="img/cert-python-programming.png" class="w-100 h-100" style="object-fit:cover;" alt="Python Programming Certificate">
+                            </div>
+                            <div class="contact-icon text-primary mb-3">
+                                <i class="fas fa-certificate fa-2x"></i>
+                            </div>
+                            <h4>Python Programming Certificate</h4>
+                            <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 12 พ.ย. 2569</p>
+                            <p class="mb-1"><i class="fas fa-map-marker-alt text-primary me-2"></i>สอบ Onsite กรุงเทพฯ</p>
+                            <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 600 บาท</p>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_PythonCert')">สมัครสอบวิชานี้</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="contact-add-item h-100">
+                            <div class="cert-image-placeholder mb-3">
+                                <img src="img/cert-uxui-design.png" class="w-100 h-100" style="object-fit:cover;" alt="UX/UI Design Certificate">
+                            </div>
+                            <div class="contact-icon text-primary mb-3">
+                                <i class="fas fa-certificate fa-2x"></i>
+                            </div>
+                            <h4>UX/UI Design Certificate</h4>
+                            <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 19 พ.ย. 2569</p>
+                            <p class="mb-1"><i class="fas fa-laptop text-primary me-2"></i>สอบแบบออนไลน์</p>
+                            <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 500 บาท</p>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_UXUICert')">สมัครสอบวิชานี้</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ฟอร์มสมัครสอบ Certify แยกฟอร์มของใครของมัน จะได้ไม่งงว่ากำลังสมัครสอบวิชาไหนอยู่ -->
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 examform" id="form_AIFundamentals" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <h4 class="text-primary">สมัครสอบ Certify</h4>
+                            <h1 class="display-5 mb-0">สมัครสอบวิชา: AI Fundamentals Certificate</h1>
+                        </div>
+                        <form onsubmit="return เช็ควิชา_AIFundamentals()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="AIFundamentals_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="AIFundamentals_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="AIFundamentals_email" placeholder="อีเมล">
+                                        <label for="AIFundamentals_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="AIFundamentals_phone" placeholder="เบอร์โทร">
+                                        <label for="AIFundamentals_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control border-0" id="AIFundamentals_date">
+                                        <label for="AIFundamentals_date">วันที่สอบที่ต้องการ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select border-0" id="AIFundamentals_level">
+                                            <option value="">-- เลือกระดับ --</option>
+                                            <option value="เริ่มต้น">เริ่มต้น</option>
+                                            <option value="กลาง">กลาง</option>
+                                            <option value="สูง">สูง</option>
+                                        </select>
+                                        <label for="AIFundamentals_level">ระดับที่จะสอบ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">สมัครสอบ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 examform" id="form_DataScienceCert" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <h4 class="text-primary">สมัครสอบ Certify</h4>
+                            <h1 class="display-5 mb-0">สมัครสอบวิชา: Data Science Certificate</h1>
+                        </div>
+                        <form onsubmit="return เช็ควิชา_DataScienceCert()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="DataScienceCert_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="DataScienceCert_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="DataScienceCert_email" placeholder="อีเมล">
+                                        <label for="DataScienceCert_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="DataScienceCert_phone" placeholder="เบอร์โทร">
+                                        <label for="DataScienceCert_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control border-0" id="DataScienceCert_date">
+                                        <label for="DataScienceCert_date">วันที่สอบที่ต้องการ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select border-0" id="DataScienceCert_level">
+                                            <option value="">-- เลือกระดับ --</option>
+                                            <option value="เริ่มต้น">เริ่มต้น</option>
+                                            <option value="กลาง">กลาง</option>
+                                            <option value="สูง">สูง</option>
+                                        </select>
+                                        <label for="DataScienceCert_level">ระดับที่จะสอบ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">สมัครสอบ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 examform" id="form_DigitalMarketingCert" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <h4 class="text-primary">สมัครสอบ Certify</h4>
+                            <h1 class="display-5 mb-0">สมัครสอบวิชา: Digital Marketing Certificate</h1>
+                        </div>
+                        <form onsubmit="return เช็ควิชา_DigitalMarketingCert()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="DigitalMarketingCert_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="DigitalMarketingCert_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="DigitalMarketingCert_email" placeholder="อีเมล">
+                                        <label for="DigitalMarketingCert_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="DigitalMarketingCert_phone" placeholder="เบอร์โทร">
+                                        <label for="DigitalMarketingCert_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control border-0" id="DigitalMarketingCert_date">
+                                        <label for="DigitalMarketingCert_date">วันที่สอบที่ต้องการ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select border-0" id="DigitalMarketingCert_level">
+                                            <option value="">-- เลือกระดับ --</option>
+                                            <option value="เริ่มต้น">เริ่มต้น</option>
+                                            <option value="กลาง">กลาง</option>
+                                            <option value="สูง">สูง</option>
+                                        </select>
+                                        <label for="DigitalMarketingCert_level">ระดับที่จะสอบ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">สมัครสอบ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 examform" id="form_CybersecurityCert" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <h4 class="text-primary">สมัครสอบ Certify</h4>
+                            <h1 class="display-5 mb-0">สมัครสอบวิชา: Cybersecurity Certificate</h1>
+                        </div>
+                        <form onsubmit="return เช็ควิชา_CybersecurityCert()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="CybersecurityCert_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="CybersecurityCert_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="CybersecurityCert_email" placeholder="อีเมล">
+                                        <label for="CybersecurityCert_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="CybersecurityCert_phone" placeholder="เบอร์โทร">
+                                        <label for="CybersecurityCert_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control border-0" id="CybersecurityCert_date">
+                                        <label for="CybersecurityCert_date">วันที่สอบที่ต้องการ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select border-0" id="CybersecurityCert_level">
+                                            <option value="">-- เลือกระดับ --</option>
+                                            <option value="เริ่มต้น">เริ่มต้น</option>
+                                            <option value="กลาง">กลาง</option>
+                                            <option value="สูง">สูง</option>
+                                        </select>
+                                        <label for="CybersecurityCert_level">ระดับที่จะสอบ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">สมัครสอบ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 examform" id="form_PythonCert" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <h4 class="text-primary">สมัครสอบ Certify</h4>
+                            <h1 class="display-5 mb-0">สมัครสอบวิชา: Python Programming Certificate</h1>
+                        </div>
+                        <form onsubmit="return เช็ควิชา_PythonCert()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="PythonCert_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="PythonCert_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="PythonCert_email" placeholder="อีเมล">
+                                        <label for="PythonCert_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="PythonCert_phone" placeholder="เบอร์โทร">
+                                        <label for="PythonCert_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control border-0" id="PythonCert_date">
+                                        <label for="PythonCert_date">วันที่สอบที่ต้องการ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select border-0" id="PythonCert_level">
+                                            <option value="">-- เลือกระดับ --</option>
+                                            <option value="เริ่มต้น">เริ่มต้น</option>
+                                            <option value="กลาง">กลาง</option>
+                                            <option value="สูง">สูง</option>
+                                        </select>
+                                        <label for="PythonCert_level">ระดับที่จะสอบ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">สมัครสอบ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 examform" id="form_UXUICert" style="display:none;">
+                        <div class="text-center mb-4">
+                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <h4 class="text-primary">สมัครสอบ Certify</h4>
+                            <h1 class="display-5 mb-0">สมัครสอบวิชา: UX/UI Design Certificate</h1>
+                        </div>
+                        <form onsubmit="return เช็ควิชา_UXUICert()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="UXUICert_name" placeholder="ชื่อ-นามสกุล">
+                                        <label for="UXUICert_name">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="UXUICert_email" placeholder="อีเมล">
+                                        <label for="UXUICert_email">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="UXUICert_phone" placeholder="เบอร์โทร">
+                                        <label for="UXUICert_phone">เบอร์โทร</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="date" class="form-control border-0" id="UXUICert_date">
+                                        <label for="UXUICert_date">วันที่สอบที่ต้องการ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select border-0" id="UXUICert_level">
+                                            <option value="">-- เลือกระดับ --</option>
+                                            <option value="เริ่มต้น">เริ่มต้น</option>
+                                            <option value="กลาง">กลาง</option>
+                                            <option value="สูง">สูง</option>
+                                        </select>
+                                        <label for="UXUICert_level">ระดับที่จะสอบ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">สมัครสอบ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- จบส่วนสอบ certify -->
+
+        </section>
+        <!-- ================= จบหน้าสอบ Certify ================= -->
+
+        <!-- ================= หน้าเกี่ยวกับเรา (page-about) ================= -->
+        <section id="page-about" class="page-section" style="display:none;">
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4">เกี่ยวกับเรา</h4>
+                <ol class="breadcrumb d-flex justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#home" onclick="แสดงหน้า('home'); return false;">หน้าแรก</a></li>
+                    <li class="breadcrumb-item active text-primary">เกี่ยวกับเรา</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- เกี่ยวกับบริษัท -->
+        <div class="container-fluid contact bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5" style="max-width: 800px;">
+                    <h4 class="text-primary">เกี่ยวกับเรา</h4>
+                    <h1 class="display-4 mb-4">รู้จักกับ JobCert</h1>
+                    <p class="mb-0">JobCert เป็นเว็บไซต์ที่ตั้งใจทำขึ้นเพื่อเป็นตัวกลางระหว่างคนที่อยากทำงานสาย AI และดิจิทัล กับบริษัทที่กำลังเปิดรับ พร้อมช่วยเตรียมความพร้อมก่อนสมัครงานจริง ผ่านหลักสูตรอบรมและการสอบ Certify ที่รวบรวมไว้ในเว็บเดียว
+                    </p>
+                </div>
+
+                <div class="row g-4 justify-content-center mb-5">
+                    <div class="col-lg-9">
+                        <div class="contact-add-item h-100">
+                            <div class="contact-icon text-primary mb-4">
+                                <i class="fas fa-building fa-2x"></i>
+                            </div>
+                            <h4 class="mb-3">ข้อมูลบริษัท</h4>
+                            <p class="mb-2"><strong>ชื่อบริษัท:</strong> JobCert</p>
+                            <p class="mb-2"><strong>ที่อยู่:</strong> มหาวิทยาลัยกรุงเทพ วิทยาเขตรังสิต เลขที่ 9/1 หมู่ 5 ถนนพหลโยธิน ตำบลคลองหนึ่ง อำเภอคลองหลวง จังหวัดปทุมธานี 12120</p>
+                            <p class="mb-0">JobCert จัดทำขึ้นเป็นโครงงานวิชาการของนักศึกษา เพื่อฝึกพัฒนาเว็บไซต์แบบครบวงจร ตั้งแต่หน้าประชาสัมพันธ์ไปจนถึงระบบลงทะเบียน</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mx-auto pb-4" style="max-width: 800px;">
+                    <h4 class="text-primary">ทีมผู้พัฒนา</h4>
+                    <h1 class="display-5 mb-0">คนที่พัฒนาเว็บไซต์นี้</h1>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="contact-add-item h-100 text-center">
+                            <div class="member-photo mx-auto mb-3">
+                                <img src="img/member1.png" alt="ชินวัตร อ่วมแก้ว">
+                            </div>
+                            <h5 class="mb-1">(ชินวัตร อ่วมแก้ว)</h5>
+                            <p class="text-muted small mb-3">1660701283</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="contact-add-item h-100 text-center">
+                            <div class="member-photo mx-auto mb-3">
+                                <img src="img/member2.jpg" alt="ศรีรัตน์ อินทลัย">
+                            </div>
+                            <h5 class="mb-1">(ศรีรัตน์ อินทลัย)</h5>
+                            <p class="text-muted small mb-3">1660705185</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- จบส่วนเกี่ยวกับบริษัท -->
+
+        </section>
+        <!-- ================= จบหน้าเกี่ยวกับเรา ================= -->
+
+        <!-- ================= หน้าติดต่อเรา (page-contact) ================= -->
+        <section id="page-contact" class="page-section" style="display:none;">
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4">ติดต่อเรา</h4>
+                <ol class="breadcrumb d-flex justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#home" onclick="แสดงหน้า('home'); return false;">หน้าแรก</a></li>
+                    <li class="breadcrumb-item active text-primary">ติดต่อเรา</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- ทีมงานพร้อมช่วยเหลือ / ฟอร์มติดต่อเรา -->
+        <div class="container-fluid contact bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5" style="max-width: 800px;">
+                    <h4 class="text-primary">ทีมงานพร้อมช่วยเหลือ</h4>
+                    <h1 class="display-4 mb-4">มีคำถาม ทักมาคุยกับเราได้เลย</h1>
+                    <p class="mb-0">ไม่ว่าจะสงสัยเรื่องการสมัครงาน การลงทะเบียนอบรม หรือการสอบ Certify ทีมงาน JobCert ยินดีตอบทุกคำถาม</p>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="contact-add-item h-100">
+                            <div class="contact-icon text-primary mb-3">
+                                <i class="fas fa-map-marker-alt fa-2x"></i>
+                            </div>
+                            <h4>ที่อยู่</h4>
+                            <p class="mb-0">มหาวิทยาลัยกรุงเทพ วิทยาเขตรังสิต 9/1 หมู่ 5 ถนนพหลโยธิน ตำบลคลองหนึ่ง อำเภอคลองหลวง ปทุมธานี 12120</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-add-item h-100">
+                            <div class="contact-icon text-primary mb-3">
+                                <i class="fas fa-envelope fa-2x"></i>
+                            </div>
+                            <h4>อีเมล</h4>
+                            <p class="mb-0">info@jobcert.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="contact-add-item h-100">
+                            <div class="contact-icon text-primary mb-3">
+                                <i class="fas fa-phone-alt fa-2x"></i>
+                            </div>
+                            <h4>โทรศัพท์</h4>
+                            <p class="mb-0">02-123-4567</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-xl-8">
+                        <div class="text-center mb-4">
+                            <h4 class="text-primary">ส่งข้อความหาเรา</h4>
+                            <h1 class="display-5 mb-0">แบบฟอร์มติดต่อ</h1>
+                        </div>
+                        <form onsubmit="return เช็คฟอร์มติดต่อ()">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="contactName" placeholder="ชื่อ-นามสกุล">
+                                        <label for="contactName">ชื่อ-นามสกุล</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control border-0" id="contactEmail" placeholder="อีเมล">
+                                        <label for="contactEmail">อีเมล</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control border-0" id="contactSubject" placeholder="หัวข้อ">
+                                        <label for="contactSubject">หัวข้อ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control border-0" placeholder="ข้อความ" id="contactMessage" style="height: 120px"></textarea>
+                                        <label for="contactMessage">ข้อความ</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">ส่งข้อความ</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- จบส่วนติดต่อเรา -->
+
+        </section>
+        <!-- ================= จบหน้าติดต่อเรา ================= -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="footer-item">
+                            <a href="#home" onclick="แสดงหน้า('home'); return false;" class="p-0">
+                                <h3 class="text-white"><i class="fas fa-robot me-3"></i> JobCert</h3>
+                            </a>
+                            <p class="text-white mb-0">เว็บไซต์สมัครงานสาย AI/ดิจิทัล รวมข้อมูลอบรม สัมมนา และสอบ Certify ไว้ในที่เดียว</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <span class="text-body"><i class="fas fa-copyright text-light me-2"></i>JobCert สงวนลิขสิทธิ์ทุกประการ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
