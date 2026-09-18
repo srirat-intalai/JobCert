@@ -1,5 +1,5 @@
 
-/*** ปรับสีธีมเว็บใหม่ ฟ้า-น้ำเงิน-ขาว ตามที่ต้องการ อันนี้แก้ทับค่าเดิมของ bootstrap เอา ***/
+/*** ปรับสีธีมเว็บใหม่ ฟ้า-น้ำเงิน-ขาว อันนี้แก้ทับค่าเดิมของ bootstrap เอา ***/
 :root {
     --bs-primary: #1E56A0;
     --bs-secondary: #D6E4F0;
@@ -41,10 +41,8 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #163172;
 }
-/*** จบส่วนแก้สีธีม ***/
 
-
-/*** Spinner Start ***/
+/*** วงกลมหมุนโหลด ***/
 #spinner {
     opacity: 0;
     visibility: hidden;
@@ -57,7 +55,6 @@ h1, h2, h3, h4, h5, h6,
     visibility: visible;
     opacity: 1;
 }
-/*** Spinner End ***/
 
 .back-to-top {
     position: fixed;
@@ -68,7 +65,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
-/*** Button Start ***/
+/*** Button ***/
 .btn {
     font-weight: 600;
     transition: .5s;
@@ -142,7 +139,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
-/*** Topbar Start ***/ 
+/*** Topbar ***/ 
 .topbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
@@ -167,10 +164,8 @@ h1, h2, h3, h4, h5, h6,
     transition: .5s;
     opacity: 1;
 }
-/*** Topbar End ***/
 
-
-/*** Navbar Start ***/
+/*** Navbar ***/
 .nav-bar {
     background: var(--bs-white);
     transition: 1s;
@@ -305,10 +300,8 @@ h1, h2, h3, h4, h5, h6,
         opacity: 1;
     }
 }
-/*** Navbar End ***/
 
-
-/*** Carousel Hero Header Start ***/
+/*** สไลด์ ***/
 .header-carousel .header-carousel-item {
     height: 700px;
 }
@@ -387,14 +380,12 @@ h1, h2, h3, h4, h5, h6,
         margin-left: 45px;
     }
 }
-/*** Carousel Hero Header End ***/
 
-
-/*** Single Page Hero Header Start ***/
+/*** Single Page ***/
 .bg-breadcrumb {
     position: relative;
     overflow: hidden;
-    /* เดิมใช้รูปพื้นหลัง แต่รูปเป็นธีมประกันภัยไม่เข้ากับเว็บเรา เลยเปลี่ยนเป็นไล่สีธีมเราแทน */
+    /* แบบเดิมใช้รูปพื้นหลัง เปลี่ยนเป็นไล่สีธีมเราแทน */
     background: linear-gradient(135deg, #1E56A0, #163172);
     padding: 60px 0 60px 0;
     transition: 0.5s;
@@ -407,10 +398,8 @@ h1, h2, h3, h4, h5, h6,
 .bg-breadcrumb .breadcrumb .breadcrumb-item a {
     color: var(--bs-white);
 }
-/*** Single Page Hero Header End ***/
 
-
-/*** Feature Start ***/
+/*** Feature ***/
 .feature .feature-item {
     border-radius: 10px;
     background: var(--bs-white);
@@ -481,10 +470,8 @@ h1, h2, h3, h4, h5, h6,
     background: var(--bs-dark);
     color: var(--bs-white);
 }
-/*** Feature End ***/
 
-
-/*** Service Start ***/
+/*** Service ***/
 .service .service-item {
     border-radius: 10px;
 }
@@ -605,10 +592,8 @@ h1, h2, h3, h4, h5, h6,
 .service .service-item:hover .service-content::after {
     height: 100%;
 }
-/*** Service End ***/
 
-
-/*** FAQs Start ***/
+/*** FAQs ***/
 .faq-section .accordion .accordion-item .accordion-header .accordion-button {
     color: var(--bs-white);
     background: rgba(30, 86, 160, .8);
@@ -619,10 +604,8 @@ h1, h2, h3, h4, h5, h6,
     color: var(--bs-primary);
     background: var(--bs-light);
 }
-/*** FAQs End ***/
 
-
-/*** Blog Start ***/
+/*** Blog ***/
 .blog .blog-item {
     border-radius: 10px;
     transition: 0.5s;
@@ -693,10 +676,8 @@ h1, h2, h3, h4, h5, h6,
 .blog .blog-item:hover .blog-content a.btn:hover {
     color: var(--bs-primary);
 }
-/*** Blog End ***/
 
-
-/*** Team Start ***/
+/*** Team ***/
 .team .team-item .team-img {
     position: relative;
     overflow: hidden;
@@ -757,10 +738,8 @@ h1, h2, h3, h4, h5, h6,
 .team .team-item:hover .team-title {
     background: var(--bs-dark);
 }
-/*** Team End ***/
 
-
-/*** Testimonial Start ***/
+/*** Testimonial ***/
 .testimonial-carousel .owl-stage-outer {
     margin-top: 58px;
     margin-right: -1px;
@@ -797,10 +776,8 @@ h1, h2, h3, h4, h5, h6,
     background: var(--bs-dark);
     color: var(--bs-white);
 }
-/*** Testimonial End ***/
 
-
-/*** Contact Start ***/
+/*** Contact ***/
 .contact .contact-img {
     position: relative;
 }
@@ -839,10 +816,8 @@ h1, h2, h3, h4, h5, h6,
     position: relative;
     z-index: 9;
 }
-/*** Contact End ***/
 
-
-/*** Footer Start ***/
+/*** Footer ***/
 .footer {
     background: var(--bs-dark);
 }
@@ -923,16 +898,12 @@ h1, h2, h3, h4, h5, h6,
 .footer .footer-item .footer-btn a:hover i {
     color: var(--bs-white);
 }
-/*** Footer End ***/
 
-
-/*** copyright Start ***/
+/*** copyright ***/
 .copyright {
     background: var(--bs-dark);
     border-top: 1px solid rgba(255, 255, 255, .08);
 }
-/*** copyright end ***/
-
 
 /*** หน้าสมัครงานแบบมีค้นหา/กรอง/เรียง เพิ่มเข้ามาทีหลัง ***/
 .job-search-box .form-control {
@@ -1022,8 +993,6 @@ h1, h2, h3, h4, h5, h6,
     background-color: var(--bs-primary);
     border-color: var(--bs-primary);
 }
-/*** จบส่วนหน้าสมัครงาน ***/
-
 
 /*** รูปสมาชิกในหน้าเกี่ยวกับเรา ขยายให้ใหญ่ขึ้นจะได้เห็นหน้าชัดๆ ***/
 .member-photo {

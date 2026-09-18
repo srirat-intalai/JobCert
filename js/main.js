@@ -105,23 +105,23 @@
 
 
 // ====================================================================
-// โค้ดของเราเอง (routing สลับหน้าแบบ SPA + เช็คฟอร์มต่างๆ) เดิมฝังเป็น <script> ท้าย index.html
-// ย้ายมารวมไว้ที่นี่ทั้งหมดแล้ว จะได้มี js ไฟล์เดียว
+// routing สลับหน้าแบบ SPA + เช็คฟอร์มต่างๆ เดิมฝังเป็น <script> ท้าย index.html
+// ย้ายมารวมไว้ที่เดียวทั้งหมด จะได้มี js ไฟล์เดียว
 // ====================================================================
 
-// สคริปต์สลับหน้าแบบ SPA เขียนแบบง่ายๆ ยังไม่ได้เชื่อมกับฐานข้อมูลจริง
+// สคริปต์สลับหน้าแบบ SPA
 function แสดงหน้า(ชื่อหน้า) {
-    // ซ่อนทุกหน้าก่อน แล้วค่อยโชว์หน้าที่กด จะได้ไม่งงว่ากำลังอยู่หน้าไหน
-    var หน้าทั้งหมด = document.getElementsByClassName("page-section");
-    for (var i = 0; i < หน้าทั้งหมด.length; i++) {
-        หน้าทั้งหมด[i].style.display = "none";
-    }
-    var หน้าที่จะโชว์ = document.getElementById("page-" + ชื่อหน้า);
-    if (หน้าที่จะโชว์ != null) {
-        หน้าที่จะโชว์.style.display = "block";
-    }
+  // ซ่อนทุกหน้าก่อน แล้วค่อยโชว์หน้าที่กด จะได้ไม่งงว่ากำลังอยู่หน้าไหน
+  var หน้าทั้งหมด = document.getElementsByClassName("page-section");
+  for (var i = 0; i < หน้าทั้งหมด.length; i++) {
+    หน้าทั้งหมด[i].style.display = "none";
+  }
+  var หน้าที่จะโชว์ = document.getElementById("page-" + ชื่อหน้า);
+  if (หน้าที่จะโชว์ != null) {
+    หน้าที่จะโชว์.style.display = "block";
+  }
 
-    // สลับ active ของเมนูด้วย
+    // สลับ active ของเมนู
     var ลิงก์nav = document.getElementsByClassName("nav-link");
     for (var j = 0; j < ลิงก์nav.length; j++) {
         ลิงก์nav[j].classList.remove("active");
@@ -169,66 +169,64 @@ window.addEventListener("load", function () {
     แสดงหน้า(หน้าเริ่มต้น);
 });
 
-// สคริปต์ค้นหา/กรอง/เรียง/สมัครงาน เขียนแบบง่ายๆ ยังไม่ได้เชื่อมกับฐานข้อมูลจริง
+// สคริปต์ค้นหา/กรอง/เรียง/สมัครงาน ยังไม่ได้เชื่อมกับฐานข้อมูลจริง
 function กรองงาน() {
-    // เอาค่าจากช่องค้นหาและตัวกรองทั้งหมดมาเช็คทีละงาน
-    var งานทั้งหมด = document.getElementsByClassName("job-list-item");
-    var คำค้น = document.getElementById("jobSearchInput").value.toLowerCase();
-    var สถานที่ = document.getElementById("jobLocationInput").value.toLowerCase();
-    var เงินเดือนขั้นต่ำ = Number(document.getElementById("salaryRange").value);
+  // เอาค่าจากช่องค้นหาและตัวกรองทั้งหมดมาเช็คทีละงาน
+  var งานทั้งหมด = document.getElementsByClassName("job-list-item");
+  var คำค้น = document.getElementById("jobSearchInput").value.toLowerCase();
+  var สถานที่ = document.getElementById("jobLocationInput").value.toLowerCase();
+  var เงินเดือนขั้นต่ำ = Number(document.getElementById("salaryRange").value);
 
-    var ประเภทที่เลือก = [];
-    if (document.getElementById("type_fulltime").checked) { ประเภทที่เลือก.push("เต็มเวลา"); }
-    if (document.getElementById("type_parttime").checked) { ประเภทที่เลือก.push("พาร์ทไทม์"); }
-    if (document.getElementById("type_internship").checked) { ประเภทที่เลือก.push("ฝึกงาน"); }
+  var ประเภทที่เลือก = [];
+  if(document.getElementById("type_fulltime").checked){ ประเภทที่เลือก.push("เต็มเวลา"); }
+  if(document.getElementById("type_parttime").checked){ ประเภทที่เลือก.push("พาร์ทไทม์"); }
+  if(document.getElementById("type_internship").checked){ ประเภทที่เลือก.push("ฝึกงาน"); }
 
-    var ระดับที่เลือก = [];
-    if (document.getElementById("level_entry").checked) { ระดับที่เลือก.push("เริ่มต้น"); }
-    if (document.getElementById("level_mid").checked) { ระดับที่เลือก.push("ปานกลาง"); }
-    if (document.getElementById("level_expert").checked) { ระดับที่เลือก.push("เชี่ยวชาญ"); }
+  var ระดับที่เลือก = [];
+  if (document.getElementById("level_entry").checked) { ระดับที่เลือก.push("เริ่มต้น"); }
+  if (document.getElementById("level_mid").checked) { ระดับที่เลือก.push("ปานกลาง"); }
+  if (document.getElementById("level_expert").checked) { ระดับที่เลือก.push("เชี่ยวชาญ"); }
+  var เจองานกี่อัน = 0;
+  for (var i = 0; i < งานทั้งหมด.length; i++) {
+    var งาน = งานทั้งหมด[i];
+    var ชื่องาน = งาน.getAttribute("data-title").toLowerCase();
+    var บริษัท = งาน.getAttribute("data-company").toLowerCase();
+    var ที่ตั้ง = งาน.getAttribute("data-location").toLowerCase();
+    var ประเภท = งาน.getAttribute("data-type");
+    var ระดับ = งาน.getAttribute("data-level");
+    var เงินเดือน = Number(งาน.getAttribute("data-salary"));
 
-    var เจองานกี่อัน = 0;
-
-    for (var i = 0; i < งานทั้งหมด.length; i++) {
-        var งาน = งานทั้งหมด[i];
-        var ชื่องาน = งาน.getAttribute("data-title").toLowerCase();
-        var บริษัท = งาน.getAttribute("data-company").toLowerCase();
-        var ที่ตั้ง = งาน.getAttribute("data-location").toLowerCase();
-        var ประเภท = งาน.getAttribute("data-type");
-        var ระดับ = งาน.getAttribute("data-level");
-        var เงินเดือน = Number(งาน.getAttribute("data-salary"));
-
-        var ผ่านคำค้น = true;
-        if (คำค้น != "") {
-            ผ่านคำค้น = (ชื่องาน.indexOf(คำค้น) != -1) || (บริษัท.indexOf(คำค้น) != -1);
-        }
-        var ผ่านสถานที่ = true;
-        if (สถานที่ != "") {
-            ผ่านสถานที่ = ที่ตั้ง.indexOf(สถานที่) != -1;
-        }
-        var ผ่านประเภท = true;
-        if (ประเภทที่เลือก.length > 0) {
-            ผ่านประเภท = ประเภทที่เลือก.indexOf(ประเภท) != -1;
-        }
-        var ผ่านระดับ = true;
-        if (ระดับที่เลือก.length > 0) {
-            ผ่านระดับ = ระดับที่เลือก.indexOf(ระดับ) != -1;
-        }
-        var ผ่านเงินเดือน = เงินเดือน >= เงินเดือนขั้นต่ำ;
-
-        if (ผ่านคำค้น && ผ่านสถานที่ && ผ่านประเภท && ผ่านระดับ && ผ่านเงินเดือน) {
-            งาน.style.display = "block";
-            เจองานกี่อัน = เจองานกี่อัน + 1;
-        } else {
-            งาน.style.display = "none";
-        }
+    var ผ่านคำค้น = true;
+    if (คำค้น != "") {
+      ผ่านคำค้น = (ชื่องาน.indexOf(คำค้น) != -1) || (บริษัท.indexOf(คำค้น) != -1);
     }
+    var ผ่านสถานที่ = true;
+    if (สถานที่ != "") {
+      ผ่านสถานที่ = ที่ตั้ง.indexOf(สถานที่) != -1;
+    }
+    var ผ่านประเภท = true;
+    if (ประเภทที่เลือก.length > 0) {
+        ผ่านประเภท = ประเภทที่เลือก.indexOf(ประเภท) != -1;
+    }
+    var ผ่านระดับ = true;
+    if (ระดับที่เลือก.length > 0) {
+        ผ่านระดับ = ระดับที่เลือก.indexOf(ระดับ) != -1;
+    }
+    var ผ่านเงินเดือน = เงินเดือน >= เงินเดือนขั้นต่ำ;
 
-    if (เจองานกี่อัน == 0) {
-        document.getElementById("noJobFound").style.display = "block";
+    if (ผ่านคำค้น && ผ่านสถานที่ && ผ่านประเภท && ผ่านระดับ && ผ่านเงินเดือน) {
+      งาน.style.display = "block";
+      เจองานกี่อัน = เจองานกี่อัน + 1;
     } else {
-        document.getElementById("noJobFound").style.display = "none";
+      งาน.style.display = "none";
     }
+  }
+
+  if (เจองานกี่อัน == 0) {
+    document.getElementById("noJobFound").style.display = "block";
+  } else {
+    document.getElementById("noJobFound").style.display = "none";
+  }
 }
 
 function ล้างตัวกรอง() {
@@ -244,28 +242,29 @@ function ล้างตัวกรอง() {
     แสดงค่าเงินเดือน();
     กรองงาน();
 }
-
 function แสดงค่าเงินเดือน() {
     var ค่า = document.getElementById("salaryRange").value;
     document.getElementById("salaryRangeText").innerHTML = "ตั้งแต่ ฿" + ค่า + " ขึ้นไป";
 }
 
+
 function กดหัวใจ(ปุ่ม) {
-    // สลับสถานะถูกใจ เก็บไว้แค่บนหน้าจอ ยังไม่ได้บันทึกลงฐานข้อมูล
+    // สลับสถานะถูกใจ เก็บไว้แค่บนหน้าจอ
     if (ปุ่ม.classList.contains("liked")) {
         ปุ่ม.classList.remove("liked");
         ปุ่ม.innerHTML = "&#9825;";
-    } else {
+    }
+    else {
         ปุ่ม.classList.add("liked");
         ปุ่ม.innerHTML = "&#9829;";
     }
 }
 
 function เรียงงาน() {
-    // ก๊อปรายการงานมาใส่ array ก่อน แล้วเรียงแบบ bubble sort ง่ายๆ
-    var วิธีเรียง = document.getElementById("jobSort").value;
-    var กล่อง = document.getElementById("jobListArea");
-    var รายการสด = กล่อง.getElementsByClassName("job-list-item");
+// ก๊อปรายการงานมาใส่ array ก่อน แล้วเรียงแบบ bubble sort 
+var วิธีเรียง = document.getElementById("jobSort").value;
+var กล่อง = document.getElementById("jobListArea");
+var รายการสด = กล่อง.getElementsByClassName("job-list-item");
 
     var งาน = [];
     for (var k = 0; k < รายการสด.length; k++) {
@@ -276,7 +275,6 @@ function เรียงงาน() {
     for (var i = 0; i < n; i++) {
         for (var j = 0; j < n - i - 1; j++) {
             var ต้องสลับ = false;
-
             if (วิธีเรียง == "salary") {
                 if (Number(งาน[j].getAttribute("data-salary")) < Number(งาน[j+1].getAttribute("data-salary"))) {
                     ต้องสลับ = true;
@@ -285,7 +283,8 @@ function เรียงงาน() {
                 if (งาน[j].getAttribute("data-title") > งาน[j+1].getAttribute("data-title")) {
                     ต้องสลับ = true;
                 }
-            } else {
+            }
+            else {
                 if (งาน[j].getAttribute("data-posted") < งาน[j+1].getAttribute("data-posted")) {
                     ต้องสลับ = true;
                 }
@@ -363,7 +362,7 @@ function เช็คฟอร์ม_DigitalTransform() {
     }
 
     alert("ส่งใบสมัครตำแหน่ง Digital & AI Transformation Associate เรียบร้อย ทีมงานจะติดต่อกลับทางอีเมลหรือเบอร์โทรที่กรอกไว้");
-    return false; // กันไว้ก่อน เพราะยังไม่มี backend รับข้อมูลจริง
+    return false; 
 }
 
 function เช็คฟอร์ม_AIDataAnalyst() {
@@ -385,10 +384,10 @@ function เช็คฟอร์ม_AIDataAnalyst() {
     }
 
     alert("ส่งใบสมัครตำแหน่ง AI Data Analyst (Entry Level) เรียบร้อย ทีมงานจะติดต่อกลับทางอีเมลหรือเบอร์โทรที่กรอกไว้");
-    return false; // กันไว้ก่อน เพราะยังไม่มี backend รับข้อมูลจริง
+    return false;
 }
 
-// สคริปต์เช็คฟอร์มอบรม เขียนแบบง่ายๆ
+// สคริปต์เช็คฟอร์มอบรม
 function แสดงคอร์ส(idที่จะโชว์) {
     var ฟอร์มทั้งหมด = document.getElementsByClassName("courseform");
     for (var i = 0; i < ฟอร์มทั้งหมด.length; i++) {
@@ -407,47 +406,42 @@ function ซ่อนคอร์สทั้งหมด() {
 }
 
 function เช็คคอร์ส_GenAIFoundations() {
-    var ชื่อ = document.getElementById("GenAIFoundations_name").value;
-    var อีเมล = document.getElementById("GenAIFoundations_email").value;
-    var เบอร์ = document.getElementById("GenAIFoundations_phone").value;
-
-    if (ชื่อ == "") {
-        alert("กรอกชื่อ-นามสกุลก่อนนะ");
-        return false;
-    }
-    if (อีเมล == "") {
-        alert("กรอกอีเมลก่อนนะ");
-        return false;
-    }
-    if (เบอร์ == "") {
-        alert("กรอกเบอร์โทรก่อนนะ");
-        return false;
-    }
-
-    alert("ลงทะเบียนคอร์ส Generative AI Foundations & Prompt Engineering Masterclass เรียบร้อย ทีมงานจะส่งรายละเอียดเพิ่มเติมไปทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+  var ชื่อ = document.getElementById("GenAIFoundations_name").value;
+  var อีเมล = document.getElementById("GenAIFoundations_email").value;
+  var เบอร์ = document.getElementById("GenAIFoundations_phone").value;
+  if (ชื่อ == "") {
+    alert("กรอกชื่อ-นามสกุลก่อนนะ");
+    return false;
+  }
+  if (อีเมล == "") {
+    alert("กรอกอีเมลก่อนนะ");
+    return false;
+  }
+  if (เบอร์ == "") {
+    alert("กรอกเบอร์โทรก่อนนะ");
+    return false;
+  }
+  alert("ลงทะเบียนคอร์ส Generative AI Foundations & Prompt Engineering Masterclass เรียบร้อย ทีมงานจะส่งรายละเอียดเพิ่มเติมไปทางอีเมลที่กรอกไว้");
+  return false; 
 }
-
 function เช็คคอร์ส_MultimodalGenAI() {
-    var ชื่อ = document.getElementById("MultimodalGenAI_name").value;
-    var อีเมล = document.getElementById("MultimodalGenAI_email").value;
-    var เบอร์ = document.getElementById("MultimodalGenAI_phone").value;
-
-    if (ชื่อ == "") {
-        alert("กรอกชื่อ-นามสกุลก่อนนะ");
-        return false;
-    }
-    if (อีเมล == "") {
-        alert("กรอกอีเมลก่อนนะ");
-        return false;
-    }
-    if (เบอร์ == "") {
-        alert("กรอกเบอร์โทรก่อนนะ");
-        return false;
-    }
-
-    alert("ลงทะเบียนคอร์ส Multimodal Generative AI for Business & Creative Content เรียบร้อย ทีมงานจะส่งรายละเอียดเพิ่มเติมไปทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+  var ชื่อ = document.getElementById("MultimodalGenAI_name").value;
+  var อีเมล = document.getElementById("MultimodalGenAI_email").value;
+  var เบอร์ = document.getElementById("MultimodalGenAI_phone").value;
+  if (ชื่อ == "") {
+    alert("กรอกชื่อ-นามสกุลก่อนนะ");
+    return false;
+  }
+  if (อีเมล == "") {
+    alert("กรอกอีเมลก่อนนะ");
+    return false;
+  }
+  if (เบอร์ == "") {
+    alert("กรอกเบอร์โทรก่อนนะ");
+    return false;
+  }
+  alert("ลงทะเบียนคอร์ส Multimodal Generative AI for Business & Creative Content เรียบร้อย ทีมงานจะส่งรายละเอียดเพิ่มเติมไปทางอีเมลที่กรอกไว้");
+  return false; 
 }
 
 function เช็คคอร์ส_DataAnalysisBasic() {
@@ -469,7 +463,7 @@ function เช็คคอร์ส_DataAnalysisBasic() {
     }
 
     alert("ลงทะเบียนคอร์ส Data Analysis เบื้องต้น เรียบร้อย ทีมงานจะส่งรายละเอียดเพิ่มเติมไปทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+    return false; 
 }
 
 function เช็คคอร์ส_CybersecurityBasic() {
@@ -491,7 +485,7 @@ function เช็คคอร์ส_CybersecurityBasic() {
     }
 
     alert("ลงทะเบียนคอร์ส Cybersecurity พื้นฐาน เรียบร้อย ทีมงานจะส่งรายละเอียดเพิ่มเติมไปทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+    return false; 
 }
 
 function เช็คคอร์ส_UXUIWorkshop() {
@@ -513,18 +507,18 @@ function เช็คคอร์ส_UXUIWorkshop() {
     }
 
     alert("ลงทะเบียนคอร์ส UX/UI Design Workshop เรียบร้อย ทีมงานจะส่งรายละเอียดเพิ่มเติมไปทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+    return false; 
 }
 
 function เช็คคอร์ส_PythonBasic() {
     var ชื่อ = document.getElementById("PythonBasic_name").value;
     var อีเมล = document.getElementById("PythonBasic_email").value;
     var เบอร์ = document.getElementById("PythonBasic_phone").value;
-
     if (ชื่อ == "") {
         alert("กรอกชื่อ-นามสกุลก่อนนะ");
         return false;
     }
+
     if (อีเมล == "") {
         alert("กรอกอีเมลก่อนนะ");
         return false;
@@ -535,10 +529,10 @@ function เช็คคอร์ส_PythonBasic() {
     }
 
     alert("ลงทะเบียนคอร์ส Python เขียนโปรแกรมเบื้องต้น เรียบร้อย ทีมงานจะส่งรายละเอียดเพิ่มเติมไปทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+    return false; 
 }
 
-// สคริปต์เช็คฟอร์มสอบ certify เขียนแบบง่ายๆ
+// สคริปต์เช็คฟอร์มสอบ certify 
 function แสดงวิชาสอบ(idที่จะโชว์) {
     var ฟอร์มทั้งหมด = document.getElementsByClassName("examform");
     for (var i = 0; i < ฟอร์มทั้งหมด.length; i++) {
@@ -561,26 +555,24 @@ function เช็ควิชา_AIFundamentals() {
     var อีเมล = document.getElementById("AIFundamentals_email").value;
     var เบอร์ = document.getElementById("AIFundamentals_phone").value;
     var วันสอบ = document.getElementById("AIFundamentals_date").value;
-
-    if (ชื่อ == "") {
+    if(ชื่อ == ""){
         alert("กรอกชื่อ-นามสกุลก่อนนะ");
         return false;
     }
-    if (อีเมล == "") {
+    if(อีเมล == ""){
         alert("กรอกอีเมลก่อนนะ");
         return false;
     }
-    if (เบอร์ == "") {
+    if(เบอร์ == ""){
         alert("กรอกเบอร์โทรก่อนนะ");
         return false;
     }
-    if (วันสอบ == "") {
+    if(วันสอบ == ""){
         alert("เลือกวันที่ต้องการสอบด้วย");
         return false;
     }
-
     alert("สมัครสอบ AI Fundamentals Certificate เรียบร้อย ทีมงานจะยืนยันรอบสอบทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+    return false; 
 }
 
 function เช็ควิชา_DataScienceCert() {
@@ -607,7 +599,7 @@ function เช็ควิชา_DataScienceCert() {
     }
 
     alert("สมัครสอบ Data Science Certificate เรียบร้อย ทีมงานจะยืนยันรอบสอบทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+    return false; 
 }
 
 function เช็ควิชา_DigitalMarketingCert() {
@@ -634,7 +626,7 @@ function เช็ควิชา_DigitalMarketingCert() {
     }
 
     alert("สมัครสอบ Digital Marketing Certificate เรียบร้อย ทีมงานจะยืนยันรอบสอบทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+    return false; 
 }
 
 function เช็ควิชา_CybersecurityCert() {
@@ -661,7 +653,7 @@ function เช็ควิชา_CybersecurityCert() {
     }
 
     alert("สมัครสอบ Cybersecurity Certificate เรียบร้อย ทีมงานจะยืนยันรอบสอบทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+    return false; 
 }
 
 function เช็ควิชา_PythonCert() {
@@ -688,7 +680,7 @@ function เช็ควิชา_PythonCert() {
     }
 
     alert("สมัครสอบ Python Programming Certificate เรียบร้อย ทีมงานจะยืนยันรอบสอบทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+    return false; 
 }
 
 function เช็ควิชา_UXUICert() {
@@ -715,28 +707,26 @@ function เช็ควิชา_UXUICert() {
     }
 
     alert("สมัครสอบ UX/UI Design Certificate เรียบร้อย ทีมงานจะยืนยันรอบสอบทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+    return false; 
 }
 
-// สคริปต์เช็คฟอร์มติดต่อ เขียนแบบง่ายๆ
+// สคริปต์เช็คฟอร์มติดต่อ
 function เช็คฟอร์มติดต่อ() {
-    var ชื่อ = document.getElementById("contactName").value;
-    var อีเมล = document.getElementById("contactEmail").value;
-    var หัวข้อ = document.getElementById("contactSubject").value;
-
-    if (ชื่อ == "") {
-        alert("กรอกชื่อ-นามสกุลก่อนนะ");
-        return false;
-    }
-    if (อีเมล == "") {
-        alert("กรอกอีเมลก่อนนะ");
-        return false;
-    }
-    if (หัวข้อ == "") {
-        alert("กรอกหัวข้อก่อนนะ");
-        return false;
-    }
-
-    alert("ส่งข้อความเรียบร้อย ทีมงานจะติดต่อกลับทางอีเมลที่กรอกไว้");
-    return false; // ยังไม่มี backend รับข้อมูลจริง กันฟอร์มส่งเฉยๆไปก่อน
+   var ชื่อ = document.getElementById("contactName").value;
+   var อีเมล = document.getElementById("contactEmail").value;
+   var หัวข้อ = document.getElementById("contactSubject").value;
+   if (ชื่อ == "") {
+      alert("กรอกชื่อ-นามสกุลก่อนนะ");
+      return false;
+   }
+   if (อีเมล == "") {
+      alert("กรอกอีเมลก่อนนะ");
+      return false;
+   }
+   if (หัวข้อ == "") {
+      alert("กรอกหัวข้อก่อนนะ");
+      return false;
+   }
+   alert("ส่งข้อความเรียบร้อย ทีมงานจะติดต่อกลับทางอีเมลที่กรอกไว้");
+   return false; 
 }
