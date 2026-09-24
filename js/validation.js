@@ -233,3 +233,74 @@ function checkExam_UXUICert() {
     }
     return false; 
 }
+
+
+// ---- ฟอร์มลงทะเบียน (หน้าลงทะเบียน) ----
+// dropdown ยังไม่ได้เลือก value จะเป็น "" (เหมือน countryselect ในสไลด์)
+function checkSelect(sel, msg) {
+    if (sel.value == "") {
+        showError(sel, msg);
+        return false;
+    }
+    hideError(sel);
+    return true;
+}
+
+function checkAddress(uaddress) {
+  if (uaddress.value == "") {
+    showError(uaddress, "กรุณากรอกที่อยู่");
+    return false;
+  }
+  hideError(uaddress);
+  return true;
+}
+
+// radio ต้องวนเช็คทีละอันว่ามีอันไหนติ๊กไหม (แบบ checkGender ที่ทำใน activity)
+function checkTier() {
+    var radios = document.getElementsByName("reg_tier");
+    var box = document.getElementById("reg_tier");
+    var checked = false;
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            checked = true;
+        }
+    }
+    if (!checked) {
+        showError(box, "กรุณาเลือกระดับทักษะ AI 1 ระดับ");
+        return false;
+    }
+    hideError(box);
+    return true;
+}
+
+// PDPA ไม่ติ๊ก = ห้ามส่ง
+function checkPdpa() {
+    var pdpa = document.getElementById("reg_pdpa");
+    if (!pdpa.checked) {
+        showError(pdpa, "ต้องกดยินยอมเรื่องข้อมูลส่วนบุคคล (PDPA) ก่อนนะ");
+        return false;
+    }
+    hideError(pdpa);
+    return true;
+}
+
+function checkRegister() {
+    var ok1 = checkSelect(document.getElementById("reg_title"), "กรุณาเลือกคำนำหน้า");
+    var ok2 = checkName(document.getElementById("reg_name"));
+    var ok3 = checkPhone(document.getElementById("reg_phone"));
+    var ok4 = checkEmail(document.getElementById("reg_email"));
+    var ok5 = checkAddress(document.getElementById("reg_address"));
+    var ok6 = checkSelect(document.getElementById("reg_edu"), "กรุณาเลือกระดับการศึกษา");
+    var ok7 = checkTier();
+    var ok8 = checkSelect(document.getElementById("reg_job"), "กรุณาเลือกตำแหน่งที่ต้องการสมัคร");
+    var ok9 = checkPdpa();
+
+    if (ok1 && ok2 && ok3 && ok4 && ok5 && ok6 && ok7 && ok8 && ok9) {
+        var title = document.getElementById("reg_title").value;
+        var name = document.getElementById("reg_name").value;
+        var job = document.getElementById("reg_job").value;
+        alert("ลงทะเบียนเรียบร้อย ขอบคุณ " + title + name + " ที่สนใจตำแหน่ง " + job + " ทีมงานจะติดต่อกลับทางอีเมลที่กรอกไว้");
+    }
+    return false; // ยังไม่มี backend เหมือนฟอร์มอื่น
+}
+

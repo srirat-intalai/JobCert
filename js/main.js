@@ -75,6 +75,8 @@ function showPage(pageName) {
         document.title = "JobCert - สอบ Certify";
     } else if (pageName == "about") {
         document.title = "JobCert - เกี่ยวกับเรา";
+    } else if (pageName == "register") {
+        document.title = "JobCert - ลงทะเบียน";
     }
 
     window.location.hash = pageName;
@@ -85,7 +87,7 @@ function showPage(pageName) {
 // ไม่ใช้ onload แล้ว เพราะมันรอไอคอนจากเน็ตโหลดเสร็จก่อน เน็ตช้าจะค้างหน้าแรก (script อยู่ท้าย body อยู่แล้ว เรียกได้เลย)
 var startPage = "home";
 var hashNow = window.location.hash.replace("#", "");
-var pageList = ["home", "job", "training", "certify", "about"];
+var pageList = ["home", "job", "training", "certify", "about", "register"];
 if (pageList.indexOf(hashNow) != -1) {
     startPage = hashNow;
 }
