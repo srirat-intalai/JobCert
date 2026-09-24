@@ -20,7 +20,6 @@
 .text-dark { color: #163172 !important; }
 
 .btn-primary,
-.btn-check:focus + .btn-primary,
 .btn-primary:focus {
     background-color: #1E56A0;
     border-color: #1E56A0;
@@ -39,20 +38,6 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #163172;
-}
-
-/*** วงกลมหมุนโหลด ***/
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
-}
-
-#spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
 }
 
 .back-to-top {
@@ -303,41 +288,16 @@ h1, h2, h3, h4, h5, h6,
 /*** สไลด์ ***/
 .header-carousel .header-carousel-item {
     height: 700px;
+    position: relative;   /* ต้องมีอันนี้ ไม่งั้นข้อความในแบนเนอร์ลอยไปทับทั้งหน้า (เดิม owl carousel ใส่ให้) */
+    overflow: hidden;
 }
 
-.header-carousel .owl-nav .owl-prev,
-.header-carousel .owl-nav .owl-next {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border-radius: 60px;
-    background: var(--bs-light);
-    color: var(--bs-primary);
-    font-size: 26px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
+/* รูปในแบนเนอร์ พอเอาไฟล์ owl carousel ออก รูปใหญ่เต็มขนาดจริงเลย ต้องบังคับให้กว้างเท่ากล่อง */
+.header-carousel img {
+    display: block;
+    width: 100%;
 }
 
-.header-carousel .owl-nav .owl-prev {
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 30px;
-}
-.header-carousel .owl-nav .owl-next {
-    bottom: 30px;
-    right: 50%;
-    transform: translateX(-50%);
-    margin-right: 30px;
-}
-
-.header-carousel .owl-nav .owl-prev:hover,
-.header-carousel .owl-nav .owl-next:hover {
-    box-shadow: inset 0 0 100px 0 var(--bs-secondary);
-    color: var(--bs-white);
-}
 
 .header-carousel .header-carousel-item .carousel-caption {
     position: absolute;
@@ -363,20 +323,6 @@ h1, h2, h3, h4, h5, h6,
 @media (max-width: 767px) {
     .header-carousel .header-carousel-item {
         height: 950px;
-    }
-
-    .header-carousel .owl-nav .owl-prev {
-        bottom: -30px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: -45px;
-    }
-
-    .header-carousel .owl-nav .owl-next {
-        bottom: -30px;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: 45px;
     }
 }
 
@@ -738,44 +684,6 @@ h1, h2, h3, h4, h5, h6,
     background: var(--bs-dark);
 }
 
-/*** Testimonial ***/
-.testimonial-carousel .owl-stage-outer {
-    margin-top: 58px;
-    margin-right: -1px;
-}
-
-.testimonial .owl-nav .owl-prev {
-    position: absolute;
-    top: -58px;
-    left: 0;
-    background: var(--bs-primary);
-    color: var(--bs-white);
-    padding: 5px 30px;
-    border-radius: 30px;
-    transition: 0.5s;
-}
-
-.testimonial .owl-nav .owl-prev:hover {
-    background: var(--bs-dark);
-    color: var(--bs-white);
-}
-
-.testimonial .owl-nav .owl-next {
-    position: absolute;
-    top: -58px;
-    right: 0;
-    background: var(--bs-primary);
-    color: var(--bs-white);
-    padding: 5px 30px;
-    border-radius: 30px;
-    transition: 0.5s;
-}
-
-.testimonial .owl-nav .owl-next:hover {
-    background: var(--bs-dark);
-    color: var(--bs-white);
-}
-
 /*** Contact ***/
 .contact .contact-img {
     position: relative;
@@ -905,28 +813,26 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /*** หน้าสมัครงานแบบมีค้นหา/กรอง/เรียง เพิ่มเข้ามาทีหลัง ***/
-.job-search-box .form-control {
-    background: var(--bs-light);
-    height: 50px;
-}
+.job-search-box .form-control { background: #F6F6F6; height: 50px; }
 
+/* การ์ดงานแต่ละอัน */
 .job-card-box {
-    background: var(--bs-white);
+    background: #fff;
     border-radius: 14px;
     padding: 1.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
     transition: .3s;
 }
 
-.job-card-box:hover {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+.job-card-box:hover{
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
 }
-
+/* กล่องไอคอนสีๆ หน้าชื่องาน */
 .job-badge {
     width: 50px;
     height: 50px;
     border-radius: 12px;
-    color: var(--bs-white);
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -944,19 +850,14 @@ h1, h2, h3, h4, h5, h6,
     margin-right: .4rem;
 }
 
-.tag-level {
-    background: var(--bs-secondary);
-    color: var(--bs-dark);
-}
+.tag-level { background: #D6E4F0; color: #163172; }
+.tag-type { background: #e6f0e9; color: #1c7a44; }
 
-.tag-type {
-    background: #e6f0e9;
-    color: #1c7a44;
-}
 
+/* ปุ่มหัวใจ กดแล้วเป็นสีแดง (class liked ใส่จาก js) */
 .heart-btn {
     border: 1px solid #e2e8f0;
-    background: var(--bs-white);
+    background: #fff;
     border-radius: 10px;
     width: 40px;
     height: 40px;
@@ -967,30 +868,23 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .heart-btn.liked {
-    color: #ef4444;
-    border-color: #ef4444;
-    background: #fff5f5;
+  color: #ef4444;
+  border-color: #ef4444;
+  background: #fff5f5;
 }
 
 .job-detail-box {
-    background: var(--bs-white);
+    background: #fff;
     border-radius: 14px;
     padding: 1.5rem;
     margin-top: .5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
 }
 
-.form-range::-webkit-slider-thumb {
-    background: var(--bs-primary);
-}
-
-.form-range::-moz-range-thumb {
-    background: var(--bs-primary);
-}
-
+/* checkbox ติ๊กแล้วเป็นสีธีมเรา ของเดิมเป็นสีฟ้า bootstrap */
 .form-check-input:checked {
-    background-color: var(--bs-primary);
-    border-color: var(--bs-primary);
+    background-color: #1E56A0;
+    border-color: #1E56A0;
 }
 
 /*** รูปสมาชิกในหน้าเกี่ยวกับเรา ขยายให้ใหญ่ขึ้นจะได้เห็นหน้าชัดๆ ***/
@@ -998,8 +892,8 @@ h1, h2, h3, h4, h5, h6,
     width: 190px;
     height: 190px;
     border-radius: 50%;
-    background: var(--bs-secondary);
-    color: var(--bs-primary);
+    background: #D6E4F0;
+    color: #1E56A0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1024,7 +918,7 @@ h1, h2, h3, h4, h5, h6,
     align-items: center;
     justify-content: center;
     color: #94a3b8;
-    background: var(--bs-light);
+    background: #F6F6F6;
     overflow: hidden;
 }
 
@@ -1038,3 +932,16 @@ h1, h2, h3, h4, h5, h6,
 }
 
 
+/*** แจ้งเตือนตอนกรอกฟอร์มผิด แบบที่ทำใน activity week4 ***/
+/* ข้อความสีแดงใต้ช่อง ซ่อนไว้ก่อน ผิดแล้ว js ค่อยสั่งโชว์ */
+.error_msg {
+    display: none;
+    color: #ff0800;
+    font-size: 13px;
+    margin: 4px 0 0 0;
+}
+
+/* กรอบแดง ต้องใส่ !important เพราะช่องกรอกมี class border-0 ของ bootstrap ทับอยู่ ไม่งั้นไม่ขึ้น */
+.input-error {
+  border: 2px solid #ff0800 !important;
+}

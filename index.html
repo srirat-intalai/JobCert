@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
     <head>
         <meta charset="utf-8">
         <title>JobCert - สมัครงาน AI ดิจิทัล อบรม และสอบ Certify</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
-        <meta content="" name="description">
+        <meta content="JobCert เว็บสมัครงานสาย AI/ดิจิทัล รวมคอร์สอบรม สัมมนา และสอบ Certify ไว้ในที่เดียว (งานวิชา CS319)" name="description">
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +17,6 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -31,22 +26,13 @@
 
     <body>
 
-        <!-- Spinner Start วงกลมหมุนโหลด -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-
         <!-- Navbar & Hero Start -->
         <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
-                    <a href="#home" onclick="แสดงหน้า('home'); return false;" class="navbar-brand p-0">
+                    <a href="#home" onclick="showPage('home'); return false;" class="navbar-brand p-0">
                         <h1 class="text-primary mb-0"><i class="fas fa-robot me-2"></i> JobCert</h1>
-                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                        <!-- <img src="images/logo.png" alt="Logo"> -->
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="fa fa-bars"></span>
@@ -54,13 +40,13 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
 
                         <div class="navbar-nav mx-0 mx-lg-auto">
-                            <a href="#home" onclick="แสดงหน้า('home'); return false;" class="nav-item nav-link active" id="navlink-home">หน้าแรก</a>
-                            <a href="#job" onclick="แสดงหน้า('job'); return false;" class="nav-item nav-link" id="navlink-job">สมัครงาน AI/ดิจิทัล</a>
-                            <a href="#training" onclick="แสดงหน้า('training'); return false;" class="nav-item nav-link" id="navlink-training">อบรม/สัมมนา</a>
-                            <a href="#certify" onclick="แสดงหน้า('certify'); return false;" class="nav-item nav-link" id="navlink-certify">สอบ Certify</a>
-                            <a href="#about" onclick="แสดงหน้า('about'); return false;" class="nav-item nav-link" id="navlink-about">เกี่ยวกับเรา</a>
+                            <a href="#home" onclick="showPage('home'); return false;" class="nav-item nav-link active" id="navlink-home">หน้าแรก</a>
+                            <a href="#job" onclick="showPage('job'); return false;" class="nav-item nav-link" id="navlink-job">สมัครงาน AI/ดิจิทัล</a>
+                            <a href="#training" onclick="showPage('training'); return false;" class="nav-item nav-link" id="navlink-training">อบรม/สัมมนา</a>
+                            <a href="#certify" onclick="showPage('certify'); return false;" class="nav-item nav-link" id="navlink-certify">สอบ Certify</a>
+                            <a href="#about" onclick="showPage('about'); return false;" class="nav-item nav-link" id="navlink-about">เกี่ยวกับเรา</a>
                             <div class="nav-btn px-3">
-                                <a href="#job" onclick="แสดงหน้า('job'); return false;" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> สมัครงานเลย</a>
+                                <a href="#job" onclick="showPage('job'); return false;" class="btn btn-primary rounded-pill py-2 px-4 ms-3 flex-shrink-0"> สมัครงานเลย</a>
                             </div>
                         </div>
                     </div>
@@ -72,50 +58,50 @@
         <section id="page-home" class="page-section">
 
         <!-- Carousel Start ภาพแบบเลื่อน -->
-        <div class="header-carousel owl-carousel">
+        <div class="header-carousel">
             <div class="header-carousel-item bg-primary">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row g-4 align-items-center">
-                            <div class="col-lg-7 animated fadeInLeft">
+                            <div class="col-lg-7">
                                 <div class="text-sm-center text-md-start">
                                     <h4 class="text-white text-uppercase fw-bold mb-4">ยินดีต้อนรับสู่ JobCert</h4>
                                     <h1 class="display-1 text-white mb-4">สมัครงานสาย AI และดิจิทัล ได้ที่นี่</h1>
                                     <p class="mb-5 fs-5">เว็บไซต์รวมตำแหน่งงานด้าน AI และดิจิทัล พร้อมข้อมูลอบรม สัมมนา และการสอบ Certify เพื่อพัฒนาทักษะก่อนสมัครงานจริง
                                     </p>
                                     <div class="d-flex justify-content-center justify-content-md-start flex-shrink-0 mb-4">
-                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#job" onclick="แสดงหน้า('job'); return false;"><i class="fas fa-briefcase me-2"></i> ดูตำแหน่งงาน</a>
-                                        <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#training" onclick="แสดงหน้า('training'); return false;">ดูหลักสูตรอบรม</a>
+                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#job" onclick="showPage('job'); return false;"><i class="fas fa-briefcase me-2"></i> ดูตำแหน่งงาน</a>
+                                        <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#training" onclick="showPage('training'); return false;">ดูหลักสูตรอบรม</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-5 animated fadeInRight">
+                            <div class="col-lg-5">
                                 <div class="d-flex align-items-center justify-content-center" style="height: 320px;">
-                                    <img src="img/hero-ai-illustration.png" alt="AI และการสมัครงานดิจิทัล">
+                                    <img src="images/hero-ai-illustration.png" alt="AI และการสมัครงานดิจิทัล">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="header-carousel-item bg-primary">
+            <div class="header-carousel-item bg-primary" style="display:none;">
                 <div class="carousel-caption">
                     <div class="container">
                         <div class="row gy-4 gy-lg-0 gx-0 gx-lg-5 align-items-center">
-                            <div class="col-lg-5 animated fadeInLeft">
+                            <div class="col-lg-5">
                                 <div class="d-flex align-items-center justify-content-center" style="height: 320px;">
-                                    <img src="img/hero-certificate-illustration.png" alt="อบรมและสอบ Certify">
+                                    <img src="images/hero-certificate-illustration.png" alt="อบรมและสอบ Certify">
                                 </div>
                             </div>
-                            <div class="col-lg-7 animated fadeInRight">
+                            <div class="col-lg-7">
                                 <div class="text-sm-center text-md-end">
                                     <h4 class="text-white text-uppercase fw-bold mb-4">อบรม + สอบ Certify</h4>
                                     <h1 class="display-1 text-white mb-4">อบรมเสริมทักษะ พร้อมสอบ Certify รับใบประกาศ</h1>
                                     <p class="mb-5 fs-5">เลือกหลักสูตรอบรมที่ตรงกับสายงาน AI และดิจิทัลที่สนใจ แล้วสมัครสอบ Certify เพื่อยืนยันความสามารถของคุณ
                                     </p>
                                     <div class="d-flex justify-content-center justify-content-md-end flex-shrink-0 mb-4">
-                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#training" onclick="แสดงหน้า('training'); return false;"><i class="fas fa-chalkboard-teacher me-2"></i> ดูหลักสูตร</a>
-                                        <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#certify" onclick="แสดงหน้า('certify'); return false;">สมัครสอบ Certify</a>
+                                        <a class="btn btn-light rounded-pill py-3 px-4 px-md-5 me-2" href="#training" onclick="showPage('training'); return false;"><i class="fas fa-chalkboard-teacher me-2"></i> ดูหลักสูตร</a>
+                                        <a class="btn btn-dark rounded-pill py-3 px-4 px-md-5 ms-2" href="#certify" onclick="showPage('certify'); return false;">สมัครสอบ Certify</a>
                                     </div>
                                 </div>
                             </div>
@@ -127,14 +113,14 @@
 
         <div class="container-fluid feature bg-light py-5">
             <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <div class="text-center mx-auto pb-5" style="max-width: 800px;">
                     <h4 class="text-primary">จุดเด่นของเรา</h4>
                     <h1 class="display-4 mb-4">ครบทั้งสมัครงาน อบรม และสอบ Certify</h1>
                     <p class="mb-0">JobCert ตั้งใจทำเว็บนี้เพื่อรวมทุกอย่างที่คนอยากทำงานสาย AI/ดิจิทัลต้องใช้ ไว้ในที่เดียว ตั้งแต่หางาน อบรมเพิ่มทักษะ จนถึงสอบวัดระดับ
                     </p>
                 </div>
                 <div class="row g-4">
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="feature-item p-4 pt-0">
                             <div class="feature-icon p-4 mb-4">
                                 <i class="fas fa-robot fa-3x"></i>
@@ -142,10 +128,10 @@
                             <h4 class="mb-4">งานสาย AI/ดิจิทัล</h4>
                             <p class="mb-4">รวมตำแหน่งงานด้าน AI และดิจิทัลจากหลายบริษัท คัดมาให้ตรงกับสายที่กำลังมองหา
                             </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#job" onclick="แสดงหน้า('job'); return false;">ดูรายละเอียด</a>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#job" onclick="showPage('job'); return false;">ดูรายละเอียด</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="feature-item p-4 pt-0">
                             <div class="feature-icon p-4 mb-4">
                                 <i class="fas fa-chalkboard-teacher fa-3x"></i>
@@ -153,10 +139,10 @@
                             <h4 class="mb-4">อบรม/สัมมนา</h4>
                             <p class="mb-4">มีคอร์สอบรมและสัมมนาให้เลือกหลายหลักสูตร ทั้งแบบออนไลน์และแบบเข้าเรียนจริง
                             </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#training" onclick="แสดงหน้า('training'); return false;">ดูรายละเอียด</a>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#training" onclick="showPage('training'); return false;">ดูรายละเอียด</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="feature-item p-4 pt-0">
                             <div class="feature-icon p-4 mb-4">
                                 <i class="fas fa-certificate fa-3x"></i>
@@ -164,7 +150,7 @@
                             <h4 class="mb-4">สอบ Certify</h4>
                             <p class="mb-4">สมัครสอบ Certify เพื่อวัดระดับความรู้ และได้ใบประกาศไว้ยื่นตอนสมัครงาน
                             </p>
-                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#certify" onclick="แสดงหน้า('certify'); return false;">ดูรายละเอียด</a>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="#certify" onclick="showPage('certify'); return false;">ดูรายละเอียด</a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +161,7 @@
         <div class="container-fluid bg-light about pb-5">
             <div class="container pb-5">
                 <div class="row g-5">
-                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="col-xl-6">
                         <div class="about-item-content bg-white rounded p-5 h-100">
                             <h4 class="text-primary">เกี่ยวกับเรา</h4>
                             <h1 class="display-4 mb-4">JobCert แหล่งรวมโอกาสสาย AI/ดิจิทัล</h1>
@@ -186,10 +172,10 @@
                             <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>ตำแหน่งงานอัปเดตสม่ำเสมอ</p>
                             <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>หลักสูตรอบรมจากผู้เชี่ยวชาญ</p>
                             <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>สอบ Certify ได้ใบประกาศจริง</p>
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="#job" onclick="แสดงหน้า('job'); return false;">ดูตำแหน่งงาน</a>
+                            <a class="btn btn-primary rounded-pill py-3 px-5" href="#job" onclick="showPage('job'); return false;">ดูตำแหน่งงาน</a>
                         </div>
                     </div>
-                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="col-xl-6">
                         <div class="bg-white rounded p-5 h-100">
                             <div class="row g-4 justify-content-center">
                                 <div class="col-12 text-center">
@@ -199,7 +185,7 @@
                                 <div class="col-sm-6">
                                     <div class="counter-item bg-light rounded p-3 h-100">
                                         <div class="counter-counting">
-                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">129</span>
+                                            <span class="text-primary fs-2 fw-bold">129</span>
                                             <span class="h1 fw-bold text-primary">+</span>
                                         </div>
                                         <h4 class="mb-0 text-dark">ตำแหน่งงานเปิดรับ</h4>
@@ -208,7 +194,7 @@
                                 <div class="col-sm-6">
                                     <div class="counter-item bg-light rounded p-3 h-100">
                                         <div class="counter-counting">
-                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">99</span>
+                                            <span class="text-primary fs-2 fw-bold">99</span>
                                             <span class="h1 fw-bold text-primary">+</span>
                                         </div>
                                         <h4 class="mb-0 text-dark">หลักสูตรอบรม</h4>
@@ -217,7 +203,7 @@
                                 <div class="col-sm-6">
                                     <div class="counter-item bg-light rounded p-3 h-100">
                                         <div class="counter-counting">
-                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">556</span>
+                                            <span class="text-primary fs-2 fw-bold">556</span>
                                             <span class="h1 fw-bold text-primary">+</span>
                                         </div>
                                         <h4 class="mb-0 text-dark">ผู้ผ่านสอบ Certify</h4>
@@ -226,7 +212,7 @@
                                 <div class="col-sm-6">
                                     <div class="counter-item bg-light rounded p-3 h-100">
                                         <div class="counter-counting">
-                                            <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">967</span>
+                                            <span class="text-primary fs-2 fw-bold">967</span>
                                             <span class="h1 fw-bold text-primary">+</span>
                                         </div>
                                         <h4 class="mb-0 text-dark">บริษัทพันธมิตร</h4>
@@ -243,7 +229,7 @@
         <div class="container-fluid faq-section bg-light py-5">
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
-                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="col-xl-6">
                         <div class="h-100">
                             <div class="mb-5">
                                 <h4 class="text-primary">คำถามที่พบบ่อย</h4>
@@ -289,9 +275,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                    <div class="col-xl-6">
                         <div class="d-flex align-items-center justify-content-center h-100">
-                            <img src="img/faq-illustration.png" class="img-fluid" style="max-height: 340px;" alt="คำถามที่พบบ่อย">
+                            <img src="images/faq-illustration.png" class="img-fluid" style="max-height: 340px;" alt="คำถามที่พบบ่อย">
                         </div>
                     </div>
                 </div>
@@ -307,7 +293,7 @@
             <div class="container text-center py-5" style="max-width: 900px;">
                 <h4 class="text-white display-4 mb-4">สมัครงาน AI/ดิจิทัล</h4>
                 <ol class="breadcrumb d-flex justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#home" onclick="แสดงหน้า('home'); return false;">หน้าแรก</a></li>
+                    <li class="breadcrumb-item"><a href="#home" onclick="showPage('home'); return false;">หน้าแรก</a></li>
                     <li class="breadcrumb-item active text-primary">สมัครงาน AI/ดิจิทัล</li>
                 </ol>
             </div>
@@ -329,7 +315,7 @@
                             <input type="text" class="form-control border-0" id="jobLocationInput" placeholder="ทำเล เช่น สาทร, บางนา">
                         </div>
                         <div class="col-md-3">
-                            <button type="button" class="btn btn-primary w-100" onclick="กรองงาน()"><i class="fas fa-search me-2"></i>ค้นหางาน</button>
+                            <button type="button" class="btn btn-primary w-100" onclick="filterJobs()"><i class="fas fa-search me-2"></i>ค้นหางาน</button>
                         </div>
                     </div>
                 </div>
@@ -345,20 +331,20 @@
                         <div class="bg-white rounded-4 p-4 shadow-sm">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <strong>ประเภทงาน</strong>
-                                <a href="#" class="small text-primary" onclick="ล้างตัวกรอง(); return false;">ล้างตัวกรอง</a>
+                                <a href="#" class="small text-primary" onclick="clearFilters(); return false;">ล้างตัวกรอง</a>
                             </div>
-                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="type_fulltime" onchange="กรองงาน()"><label class="form-check-label" for="type_fulltime">เต็มเวลา</label></div>
-                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="type_parttime" onchange="กรองงาน()"><label class="form-check-label" for="type_parttime">พาร์ทไทม์</label></div>
-                            <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="type_internship" onchange="กรองงาน()"><label class="form-check-label" for="type_internship">ฝึกงาน</label></div>
+                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="type_fulltime" onchange="filterJobs()"><label class="form-check-label" for="type_fulltime">เต็มเวลา</label></div>
+                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="type_parttime" onchange="filterJobs()"><label class="form-check-label" for="type_parttime">พาร์ทไทม์</label></div>
+                            <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="type_internship" onchange="filterJobs()"><label class="form-check-label" for="type_internship">ฝึกงาน</label></div>
 
                             <strong class="d-block mb-2">เงินเดือนขั้นต่ำ</strong>
-                            <input type="range" class="form-range" min="0" max="70000" step="1000" value="0" id="salaryRange" oninput="แสดงค่าเงินเดือน(); กรองงาน()">
+                            <input type="range" class="form-range" min="0" max="70000" step="1000" value="0" id="salaryRange" oninput="showSalary(); filterJobs()">
                             <div class="small text-muted mb-4" id="salaryRangeText">ตั้งแต่ ฿0 ขึ้นไป</div>
 
                             <strong class="d-block mb-2">ระดับประสบการณ์</strong>
-                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="level_entry" onchange="กรองงาน()"><label class="form-check-label" for="level_entry">เริ่มต้น</label></div>
-                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="level_mid" onchange="กรองงาน()"><label class="form-check-label" for="level_mid">ปานกลาง</label></div>
-                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="level_expert" onchange="กรองงาน()"><label class="form-check-label" for="level_expert">เชี่ยวชาญ</label></div>
+                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="level_entry" onchange="filterJobs()"><label class="form-check-label" for="level_entry">เริ่มต้น</label></div>
+                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="level_mid" onchange="filterJobs()"><label class="form-check-label" for="level_mid">ปานกลาง</label></div>
+                            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="level_expert" onchange="filterJobs()"><label class="form-check-label" for="level_expert">เชี่ยวชาญ</label></div>
                         </div>
                     </div>
 
@@ -367,7 +353,7 @@
                             <h4 class="mb-0">ตำแหน่งงานแนะนำ</h4>
                             <div class="d-flex align-items-center gap-2">
                                 <label for="jobSort" class="mb-0 small text-muted">เรียงตาม:</label>
-                                <select class="form-select form-select-sm" id="jobSort" onchange="เรียงงาน()">
+                                <select class="form-select form-select-sm" id="jobSort" onchange="sortJobs()">
                                     <option value="recent">ล่าสุด</option>
                                     <option value="salary">เงินเดือนสูงสุด</option>
                                     <option value="name">ชื่อตำแหน่ง</option>
@@ -386,7 +372,7 @@
                                                 <div class="small text-muted">NexGen Innovations Co., Ltd. &middot; 25 ผู้สมัคร</div>
                                             </div>
                                         </div>
-                                        <button type="button" class="heart-btn" onclick="กดหัวใจ(this)">&#9825;</button>
+                                        <button type="button" class="heart-btn" onclick="likeJob(this)">&#9825;</button>
                                     </div>
                                     <div class="job-card-tags mt-3 mb-2">
                                         <span class="tag-level">ปานกลาง</span>
@@ -431,7 +417,7 @@
                                             <li>Retirement plan (provident fund) with special company matching rates</li>
                                             <li>Activity areas, fitness classes, and corporate sports club access</li>
                                         </ul>
-                                        <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงฟอร์ม('form_AIWebDev')">สมัครตำแหน่งนี้</button>
+                                        <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="showJobForm('form_AIWebDev')">สมัครตำแหน่งนี้</button>
                                     </div>
                                 </div>
                             </div>
@@ -445,7 +431,7 @@
                                                 <div class="small text-muted">Siam Smart Solution Co., Ltd. &middot; 18 ผู้สมัคร</div>
                                             </div>
                                         </div>
-                                        <button type="button" class="heart-btn" onclick="กดหัวใจ(this)">&#9825;</button>
+                                        <button type="button" class="heart-btn" onclick="likeJob(this)">&#9825;</button>
                                     </div>
                                     <div class="job-card-tags mt-3 mb-2">
                                         <span class="tag-level">ปานกลาง</span>
@@ -490,7 +476,7 @@
                                             <li>Comprehensive health insurance and annual check-ups</li>
                                             <li>Travel and fuel allowance for corporate client visits</li>
                                         </ul>
-                                        <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงฟอร์ม('form_DigitalTransform')">สมัครตำแหน่งนี้</button>
+                                        <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="showJobForm('form_DigitalTransform')">สมัครตำแหน่งนี้</button>
                                     </div>
                                 </div>
                             </div>
@@ -504,7 +490,7 @@
                                                 <div class="small text-muted">BrightWave Digital Co., Ltd. &middot; 12 ผู้สมัคร</div>
                                             </div>
                                         </div>
-                                        <button type="button" class="heart-btn" onclick="กดหัวใจ(this)">&#9825;</button>
+                                        <button type="button" class="heart-btn" onclick="likeJob(this)">&#9825;</button>
                                     </div>
                                     <div class="job-card-tags mt-3 mb-2">
                                         <span class="tag-level">เริ่มต้น</span>
@@ -545,7 +531,7 @@
                                             <li>Flexible working hours and hybrid work options</li>
                                             <li>Annual performance bonus</li>
                                         </ul>
-                                        <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงฟอร์ม('form_AIDataAnalyst')">สมัครตำแหน่งนี้</button>
+                                        <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="showJobForm('form_AIDataAnalyst')">สมัครตำแหน่งนี้</button>
                                     </div>
                                 </div>
                             </div>
@@ -558,30 +544,33 @@
                 <div class="row justify-content-center mt-4">
                     <div class="col-xl-8 jobform" id="form_AIWebDev" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#jobListArea" onclick="ซ่อนฟอร์มงานทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกตำแหน่งอื่น</a>
+                            <a href="#jobListArea" onclick="hideJobForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกตำแหน่งอื่น</a>
                             <h4 class="text-primary">ใบสมัครงาน</h4>
                             <h1 class="display-5 mb-0">สมัครตำแหน่ง: AI-Assisted Web Developer</h1>
                             <p class="text-muted mb-0">NexGen Innovations Co., Ltd.</p>
                         </div>
-                        <form onsubmit="return เช็คฟอร์ม_AIWebDev()">
+                        <form novalidate onsubmit="return checkJob_AIWebDev()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="AIWebDev_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="AIWebDev_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="AIWebDev_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="AIWebDev_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="AIWebDev_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="AIWebDev_email" placeholder="อีเมล" required>
                                         <label for="AIWebDev_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="AIWebDev_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="AIWebDev_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="AIWebDev_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="AIWebDev_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="AIWebDev_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
@@ -614,30 +603,33 @@
                     </div>
                     <div class="col-xl-8 jobform" id="form_DigitalTransform" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#jobListArea" onclick="ซ่อนฟอร์มงานทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกตำแหน่งอื่น</a>
+                            <a href="#jobListArea" onclick="hideJobForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกตำแหน่งอื่น</a>
                             <h4 class="text-primary">ใบสมัครงาน</h4>
                             <h1 class="display-5 mb-0">สมัครตำแหน่ง: Digital & AI Transformation Associate</h1>
                             <p class="text-muted mb-0">Siam Smart Solution Co., Ltd.</p>
                         </div>
-                        <form onsubmit="return เช็คฟอร์ม_DigitalTransform()">
+                        <form novalidate onsubmit="return checkJob_DigitalTransform()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="DigitalTransform_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="DigitalTransform_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="DigitalTransform_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="DigitalTransform_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="DigitalTransform_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="DigitalTransform_email" placeholder="อีเมล" required>
                                         <label for="DigitalTransform_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="DigitalTransform_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="DigitalTransform_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="DigitalTransform_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="DigitalTransform_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="DigitalTransform_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
@@ -670,30 +662,33 @@
                     </div>
                     <div class="col-xl-8 jobform" id="form_AIDataAnalyst" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#jobListArea" onclick="ซ่อนฟอร์มงานทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกตำแหน่งอื่น</a>
+                            <a href="#jobListArea" onclick="hideJobForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกตำแหน่งอื่น</a>
                             <h4 class="text-primary">ใบสมัครงาน</h4>
                             <h1 class="display-5 mb-0">สมัครตำแหน่ง: AI Data Analyst (Entry Level)</h1>
                             <p class="text-muted mb-0">BrightWave Digital Co., Ltd.</p>
                         </div>
-                        <form onsubmit="return เช็คฟอร์ม_AIDataAnalyst()">
+                        <form novalidate onsubmit="return checkJob_AIDataAnalyst()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="AIDataAnalyst_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="AIDataAnalyst_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="AIDataAnalyst_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="AIDataAnalyst_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="AIDataAnalyst_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="AIDataAnalyst_email" placeholder="อีเมล" required>
                                         <label for="AIDataAnalyst_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="AIDataAnalyst_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="AIDataAnalyst_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="AIDataAnalyst_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="AIDataAnalyst_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="AIDataAnalyst_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
@@ -737,7 +732,7 @@
             <div class="container text-center py-5" style="max-width: 900px;">
                 <h4 class="text-white display-4 mb-4">อบรม/สัมมนา</h4>
                 <ol class="breadcrumb d-flex justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#home" onclick="แสดงหน้า('home'); return false;">หน้าแรก</a></li>
+                    <li class="breadcrumb-item"><a href="#home" onclick="showPage('home'); return false;">หน้าแรก</a></li>
                     <li class="breadcrumb-item active text-primary">อบรม/สัมมนา</li>
                 </ol>
             </div>
@@ -773,7 +768,7 @@
                                     <p class="mb-1"><strong>รูปแบบการเรียน:</strong> เรียนออนไลน์ พร้อม Workshop ลงมือทำจริง</p>
                                     <p class="mb-0"><strong>สิ่งที่ต้องเตรียม:</strong> โน้ตบุ๊กส่วนตัว และบัญชี ChatGPT หรือ Claude (ใช้แบบฟรีเรียนได้)</p>
                                 </div>
-                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_GenAIFoundations')">ลงทะเบียนคอร์สนี้</button>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="showCourseForm('form_GenAIFoundations')">ลงทะเบียนคอร์สนี้</button>
                             </div>
                         </div>
                     </div>
@@ -797,7 +792,7 @@
                                     <p class="mb-1"><strong>รูปแบบการเรียน:</strong> เรียนออนไลน์ พร้อมตัวอย่างเคสจริงจากธุรกิจ</p>
                                     <p class="mb-0"><strong>สิ่งที่ต้องเตรียม:</strong> โน้ตบุ๊กส่วนตัว และบัญชีเครื่องมือ Generative AI ด้านภาพ/วิดีโอ (มีแบบฟรีให้ทดลองใช้)</p>
                                 </div>
-                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_MultimodalGenAI')">ลงทะเบียนคอร์สนี้</button>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="showCourseForm('form_MultimodalGenAI')">ลงทะเบียนคอร์สนี้</button>
                             </div>
                         </div>
                     </div>
@@ -814,7 +809,7 @@
                             <div class="accordion-body">
                                 <h5 class="text-primary">สิ่งที่ผู้อบรมจะได้รับ</h5>
                                 <p>ผู้จบหลักสูตรจะสามารถใช้เครื่องมือ AI ช่วยทำความสะอาดข้อมูล วิเคราะห์แนวโน้ม และสร้างรายงานสรุปที่นำไปใช้ตัดสินใจทางธุรกิจได้จริง เหมาะกับผู้เริ่มต้นที่ไม่มีพื้นฐานสาย Data มาก่อน</p>
-                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_DataAnalysisBasic')">ลงทะเบียนคอร์สนี้</button>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="showCourseForm('form_DataAnalysisBasic')">ลงทะเบียนคอร์สนี้</button>
                             </div>
                         </div>
                     </div>
@@ -831,7 +826,7 @@
                             <div class="accordion-body">
                                 <h5 class="text-primary">สิ่งที่ผู้อบรมจะได้รับ</h5>
                                 <p>ผู้จบหลักสูตรจะเข้าใจความเสี่ยงด้านความปลอดภัยไซเบอร์ที่มาพร้อมกับการใช้ AI ในองค์กร รวมถึงแนวทางปฏิบัติตาม PDPA และหลักจริยธรรมในการใช้ข้อมูลผู้ใช้อย่างรับผิดชอบ</p>
-                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_CybersecurityBasic')">ลงทะเบียนคอร์สนี้</button>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="showCourseForm('form_CybersecurityBasic')">ลงทะเบียนคอร์สนี้</button>
                             </div>
                         </div>
                     </div>
@@ -848,7 +843,7 @@
                             <div class="accordion-body">
                                 <h5 class="text-primary">สิ่งที่ผู้อบรมจะได้รับ</h5>
                                 <p>ผู้จบหลักสูตรจะออกแบบหน้าตาแอปพลิเคชันและเว็บไซต์โดยยึดผู้ใช้งานเป็นศูนย์กลาง (Human-Centered Design) พร้อมนำเครื่องมือ AI มาช่วยร่างดีไซน์และทดสอบการใช้งานได้เร็วขึ้น</p>
-                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_UXUIWorkshop')">ลงทะเบียนคอร์สนี้</button>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="showCourseForm('form_UXUIWorkshop')">ลงทะเบียนคอร์สนี้</button>
                             </div>
                         </div>
                     </div>
@@ -865,7 +860,7 @@
                             <div class="accordion-body">
                                 <h5 class="text-primary">สิ่งที่ผู้อบรมจะได้รับ</h5>
                                 <p>ผู้จบหลักสูตรจะเขียนโปรแกรม Python พื้นฐานได้ และเข้าใจแนวคิดการออกแบบระบบเล็กๆ ที่เชื่อมต่อกับโมเดล AI ผ่าน API เพื่อต่อยอดเป็นระบบอัตโนมัติในงานจริง</p>
-                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="แสดงคอร์ส('form_PythonBasic')">ลงทะเบียนคอร์สนี้</button>
+                                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 mt-2" onclick="showCourseForm('form_PythonBasic')">ลงทะเบียนคอร์สนี้</button>
                             </div>
                         </div>
                     </div>
@@ -875,29 +870,32 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-8 courseform" id="form_GenAIFoundations" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <a href="#courseAccordion" onclick="hideCourseForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
                             <h4 class="text-primary">ลงทะเบียนอบรม</h4>
                             <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: Generative AI Foundations & Prompt Engineering Masterclass</h1>
                         </div>
-                        <form onsubmit="return เช็คคอร์ส_GenAIFoundations()">
+                        <form novalidate onsubmit="return checkCourse_GenAIFoundations()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="GenAIFoundations_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="GenAIFoundations_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="GenAIFoundations_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="GenAIFoundations_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="GenAIFoundations_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="GenAIFoundations_email" placeholder="อีเมล" required>
                                         <label for="GenAIFoundations_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="GenAIFoundations_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="GenAIFoundations_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="GenAIFoundations_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="GenAIFoundations_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="GenAIFoundations_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
@@ -913,29 +911,32 @@
                     </div>
                     <div class="col-xl-8 courseform" id="form_MultimodalGenAI" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <a href="#courseAccordion" onclick="hideCourseForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
                             <h4 class="text-primary">ลงทะเบียนอบรม</h4>
                             <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: Multimodal Generative AI for Business & Creative Content</h1>
                         </div>
-                        <form onsubmit="return เช็คคอร์ส_MultimodalGenAI()">
+                        <form novalidate onsubmit="return checkCourse_MultimodalGenAI()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="MultimodalGenAI_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="MultimodalGenAI_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="MultimodalGenAI_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="MultimodalGenAI_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="MultimodalGenAI_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="MultimodalGenAI_email" placeholder="อีเมล" required>
                                         <label for="MultimodalGenAI_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="MultimodalGenAI_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="MultimodalGenAI_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="MultimodalGenAI_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="MultimodalGenAI_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="MultimodalGenAI_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
@@ -951,29 +952,32 @@
                     </div>
                     <div class="col-xl-8 courseform" id="form_DataAnalysisBasic" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <a href="#courseAccordion" onclick="hideCourseForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
                             <h4 class="text-primary">ลงทะเบียนอบรม</h4>
                             <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: Data Analysis เบื้องต้น</h1>
                         </div>
-                        <form onsubmit="return เช็คคอร์ส_DataAnalysisBasic()">
+                        <form novalidate onsubmit="return checkCourse_DataAnalysisBasic()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="DataAnalysisBasic_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="DataAnalysisBasic_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="DataAnalysisBasic_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="DataAnalysisBasic_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="DataAnalysisBasic_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="DataAnalysisBasic_email" placeholder="อีเมล" required>
                                         <label for="DataAnalysisBasic_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="DataAnalysisBasic_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="DataAnalysisBasic_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="DataAnalysisBasic_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="DataAnalysisBasic_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="DataAnalysisBasic_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
@@ -989,29 +993,32 @@
                     </div>
                     <div class="col-xl-8 courseform" id="form_CybersecurityBasic" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <a href="#courseAccordion" onclick="hideCourseForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
                             <h4 class="text-primary">ลงทะเบียนอบรม</h4>
                             <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: Cybersecurity พื้นฐาน</h1>
                         </div>
-                        <form onsubmit="return เช็คคอร์ส_CybersecurityBasic()">
+                        <form novalidate onsubmit="return checkCourse_CybersecurityBasic()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="CybersecurityBasic_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="CybersecurityBasic_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="CybersecurityBasic_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="CybersecurityBasic_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="CybersecurityBasic_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="CybersecurityBasic_email" placeholder="อีเมล" required>
                                         <label for="CybersecurityBasic_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="CybersecurityBasic_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="CybersecurityBasic_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="CybersecurityBasic_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="CybersecurityBasic_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="CybersecurityBasic_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
@@ -1027,29 +1034,32 @@
                     </div>
                     <div class="col-xl-8 courseform" id="form_UXUIWorkshop" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <a href="#courseAccordion" onclick="hideCourseForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
                             <h4 class="text-primary">ลงทะเบียนอบรม</h4>
                             <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: UX/UI Design Workshop</h1>
                         </div>
-                        <form onsubmit="return เช็คคอร์ส_UXUIWorkshop()">
+                        <form novalidate onsubmit="return checkCourse_UXUIWorkshop()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="UXUIWorkshop_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="UXUIWorkshop_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="UXUIWorkshop_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="UXUIWorkshop_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="UXUIWorkshop_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="UXUIWorkshop_email" placeholder="อีเมล" required>
                                         <label for="UXUIWorkshop_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="UXUIWorkshop_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="UXUIWorkshop_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="UXUIWorkshop_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="UXUIWorkshop_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="UXUIWorkshop_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
@@ -1065,29 +1075,32 @@
                     </div>
                     <div class="col-xl-8 courseform" id="form_PythonBasic" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#courseAccordion" onclick="ซ่อนคอร์สทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
+                            <a href="#courseAccordion" onclick="hideCourseForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกคอร์สอื่น</a>
                             <h4 class="text-primary">ลงทะเบียนอบรม</h4>
                             <h1 class="display-5 mb-0">ลงทะเบียนคอร์ส: Python เขียนโปรแกรมเบื้องต้น</h1>
                         </div>
-                        <form onsubmit="return เช็คคอร์ส_PythonBasic()">
+                        <form novalidate onsubmit="return checkCourse_PythonBasic()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="PythonBasic_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="PythonBasic_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="PythonBasic_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="PythonBasic_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="PythonBasic_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="PythonBasic_email" placeholder="อีเมล" required>
                                         <label for="PythonBasic_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="PythonBasic_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="PythonBasic_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="PythonBasic_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="PythonBasic_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="PythonBasic_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
@@ -1114,7 +1127,7 @@
             <div class="container text-center py-5" style="max-width: 900px;">
                 <h4 class="text-white display-4 mb-4">สอบ Certify</h4>
                 <ol class="breadcrumb d-flex justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#home" onclick="แสดงหน้า('home'); return false;">หน้าแรก</a></li>
+                    <li class="breadcrumb-item"><a href="#home" onclick="showPage('home'); return false;">หน้าแรก</a></li>
                     <li class="breadcrumb-item active text-primary">สอบ Certify</li>
                 </ol>
             </div>
@@ -1134,7 +1147,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="contact-add-item h-100">
                             <div class="cert-image-placeholder mb-3">
-                                <img src="img/cert-ai-fundamentals.png" class="w-100 h-100" style="object-fit:cover;" alt="AI Fundamentals Certificate">
+                                <img src="images/cert-ai-fundamentals.png" class="w-100 h-100" style="object-fit:cover;" alt="AI Fundamentals Certificate">
                             </div>
                             <div class="contact-icon text-primary mb-3">
                                 <i class="fas fa-certificate fa-2x"></i>
@@ -1143,13 +1156,13 @@
                             <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 15 ต.ค. 2569</p>
                             <p class="mb-1"><i class="fas fa-laptop text-primary me-2"></i>สอบแบบออนไลน์</p>
                             <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 500 บาท</p>
-                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_AIFundamentals')">สมัครสอบวิชานี้</button>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="showExamForm('form_AIFundamentals')">สมัครสอบวิชานี้</button>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="contact-add-item h-100">
                             <div class="cert-image-placeholder mb-3">
-                                <img src="img/cert-data-science.png" class="w-100 h-100" style="object-fit:cover;" alt="Data Science Certificate">
+                                <img src="images/cert-data-science.png" class="w-100 h-100" style="object-fit:cover;" alt="Data Science Certificate">
                             </div>
                             <div class="contact-icon text-primary mb-3">
                                 <i class="fas fa-certificate fa-2x"></i>
@@ -1158,13 +1171,13 @@
                             <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 22 ต.ค. 2569</p>
                             <p class="mb-1"><i class="fas fa-map-marker-alt text-primary me-2"></i>สอบ Onsite กรุงเทพฯ</p>
                             <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 800 บาท</p>
-                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_DataScienceCert')">สมัครสอบวิชานี้</button>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="showExamForm('form_DataScienceCert')">สมัครสอบวิชานี้</button>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="contact-add-item h-100">
                             <div class="cert-image-placeholder mb-3">
-                                <img src="img/cert-digital-marketing.png" class="w-100 h-100" style="object-fit:cover;" alt="Digital Marketing Certificate">
+                                <img src="images/cert-digital-marketing.png" class="w-100 h-100" style="object-fit:cover;" alt="Digital Marketing Certificate">
                             </div>
                             <div class="contact-icon text-primary mb-3">
                                 <i class="fas fa-certificate fa-2x"></i>
@@ -1173,13 +1186,13 @@
                             <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 29 ต.ค. 2569</p>
                             <p class="mb-1"><i class="fas fa-laptop text-primary me-2"></i>สอบแบบออนไลน์</p>
                             <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 400 บาท</p>
-                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_DigitalMarketingCert')">สมัครสอบวิชานี้</button>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="showExamForm('form_DigitalMarketingCert')">สมัครสอบวิชานี้</button>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="contact-add-item h-100">
                             <div class="cert-image-placeholder mb-3">
-                                <img src="img/cert-cybersecurity.png" class="w-100 h-100" style="object-fit:cover;" alt="Cybersecurity Certificate">
+                                <img src="images/cert-cybersecurity.png" class="w-100 h-100" style="object-fit:cover;" alt="Cybersecurity Certificate">
                             </div>
                             <div class="contact-icon text-primary mb-3">
                                 <i class="fas fa-certificate fa-2x"></i>
@@ -1188,13 +1201,13 @@
                             <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 5 พ.ย. 2569</p>
                             <p class="mb-1"><i class="fas fa-laptop text-primary me-2"></i>สอบแบบออนไลน์</p>
                             <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 700 บาท</p>
-                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_CybersecurityCert')">สมัครสอบวิชานี้</button>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="showExamForm('form_CybersecurityCert')">สมัครสอบวิชานี้</button>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="contact-add-item h-100">
                             <div class="cert-image-placeholder mb-3">
-                                <img src="img/cert-python-programming.png" class="w-100 h-100" style="object-fit:cover;" alt="Python Programming Certificate">
+                                <img src="images/cert-python-programming.png" class="w-100 h-100" style="object-fit:cover;" alt="Python Programming Certificate">
                             </div>
                             <div class="contact-icon text-primary mb-3">
                                 <i class="fas fa-certificate fa-2x"></i>
@@ -1203,13 +1216,13 @@
                             <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 12 พ.ย. 2569</p>
                             <p class="mb-1"><i class="fas fa-map-marker-alt text-primary me-2"></i>สอบ Onsite กรุงเทพฯ</p>
                             <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 600 บาท</p>
-                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_PythonCert')">สมัครสอบวิชานี้</button>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="showExamForm('form_PythonCert')">สมัครสอบวิชานี้</button>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4">
                         <div class="contact-add-item h-100">
                             <div class="cert-image-placeholder mb-3">
-                                <img src="img/cert-uxui-design.png" class="w-100 h-100" style="object-fit:cover;" alt="UX/UI Design Certificate">
+                                <img src="images/cert-uxui-design.png" class="w-100 h-100" style="object-fit:cover;" alt="UX/UI Design Certificate">
                             </div>
                             <div class="contact-icon text-primary mb-3">
                                 <i class="fas fa-certificate fa-2x"></i>
@@ -1218,7 +1231,7 @@
                             <p class="mb-1"><i class="fas fa-calendar text-primary me-2"></i>รอบสอบ 19 พ.ย. 2569</p>
                             <p class="mb-1"><i class="fas fa-laptop text-primary me-2"></i>สอบแบบออนไลน์</p>
                             <p class="mb-3"><i class="fas fa-tag text-primary me-2"></i>ค่าสอบ 500 บาท</p>
-                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="แสดงวิชาสอบ('form_UXUICert')">สมัครสอบวิชานี้</button>
+                            <button type="button" class="btn btn-primary rounded-pill py-2 px-4" onclick="showExamForm('form_UXUICert')">สมัครสอบวิชานี้</button>
                         </div>
                     </div>
                 </div>
@@ -1227,35 +1240,39 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-8 examform" id="form_AIFundamentals" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <a href="#certify-list" onclick="hideExamForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
                             <h4 class="text-primary">สมัครสอบ Certify</h4>
                             <h1 class="display-5 mb-0">สมัครสอบวิชา: AI Fundamentals Certificate</h1>
                         </div>
-                        <form onsubmit="return เช็ควิชา_AIFundamentals()">
+                        <form novalidate onsubmit="return checkExam_AIFundamentals()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="AIFundamentals_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="AIFundamentals_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="AIFundamentals_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="AIFundamentals_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="AIFundamentals_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="AIFundamentals_email" placeholder="อีเมล" required>
                                         <label for="AIFundamentals_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="AIFundamentals_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="AIFundamentals_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="AIFundamentals_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="AIFundamentals_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="AIFundamentals_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="date" class="form-control border-0" id="AIFundamentals_date">
+                                        <input type="date" class="form-control border-0" id="AIFundamentals_date" required>
                                         <label for="AIFundamentals_date">วันที่สอบที่ต้องการ</label>
                                     </div>
+                                    <p class="error_msg" id="AIFundamentals_date_error"></p>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
@@ -1276,35 +1293,39 @@
                     </div>
                     <div class="col-xl-8 examform" id="form_DataScienceCert" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <a href="#certify-list" onclick="hideExamForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
                             <h4 class="text-primary">สมัครสอบ Certify</h4>
                             <h1 class="display-5 mb-0">สมัครสอบวิชา: Data Science Certificate</h1>
                         </div>
-                        <form onsubmit="return เช็ควิชา_DataScienceCert()">
+                        <form novalidate onsubmit="return checkExam_DataScienceCert()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="DataScienceCert_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="DataScienceCert_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="DataScienceCert_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="DataScienceCert_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="DataScienceCert_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="DataScienceCert_email" placeholder="อีเมล" required>
                                         <label for="DataScienceCert_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="DataScienceCert_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="DataScienceCert_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="DataScienceCert_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="DataScienceCert_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="DataScienceCert_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="date" class="form-control border-0" id="DataScienceCert_date">
+                                        <input type="date" class="form-control border-0" id="DataScienceCert_date" required>
                                         <label for="DataScienceCert_date">วันที่สอบที่ต้องการ</label>
                                     </div>
+                                    <p class="error_msg" id="DataScienceCert_date_error"></p>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
@@ -1325,35 +1346,39 @@
                     </div>
                     <div class="col-xl-8 examform" id="form_DigitalMarketingCert" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <a href="#certify-list" onclick="hideExamForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
                             <h4 class="text-primary">สมัครสอบ Certify</h4>
                             <h1 class="display-5 mb-0">สมัครสอบวิชา: Digital Marketing Certificate</h1>
                         </div>
-                        <form onsubmit="return เช็ควิชา_DigitalMarketingCert()">
+                        <form novalidate onsubmit="return checkExam_DigitalMarketingCert()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="DigitalMarketingCert_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="DigitalMarketingCert_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="DigitalMarketingCert_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="DigitalMarketingCert_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="DigitalMarketingCert_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="DigitalMarketingCert_email" placeholder="อีเมล" required>
                                         <label for="DigitalMarketingCert_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="DigitalMarketingCert_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="DigitalMarketingCert_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="DigitalMarketingCert_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="DigitalMarketingCert_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="DigitalMarketingCert_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="date" class="form-control border-0" id="DigitalMarketingCert_date">
+                                        <input type="date" class="form-control border-0" id="DigitalMarketingCert_date" required>
                                         <label for="DigitalMarketingCert_date">วันที่สอบที่ต้องการ</label>
                                     </div>
+                                    <p class="error_msg" id="DigitalMarketingCert_date_error"></p>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
@@ -1374,35 +1399,39 @@
                     </div>
                     <div class="col-xl-8 examform" id="form_CybersecurityCert" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <a href="#certify-list" onclick="hideExamForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
                             <h4 class="text-primary">สมัครสอบ Certify</h4>
                             <h1 class="display-5 mb-0">สมัครสอบวิชา: Cybersecurity Certificate</h1>
                         </div>
-                        <form onsubmit="return เช็ควิชา_CybersecurityCert()">
+                        <form novalidate onsubmit="return checkExam_CybersecurityCert()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="CybersecurityCert_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="CybersecurityCert_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="CybersecurityCert_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="CybersecurityCert_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="CybersecurityCert_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="CybersecurityCert_email" placeholder="อีเมล" required>
                                         <label for="CybersecurityCert_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="CybersecurityCert_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="CybersecurityCert_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="CybersecurityCert_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="CybersecurityCert_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="CybersecurityCert_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="date" class="form-control border-0" id="CybersecurityCert_date">
+                                        <input type="date" class="form-control border-0" id="CybersecurityCert_date" required>
                                         <label for="CybersecurityCert_date">วันที่สอบที่ต้องการ</label>
                                     </div>
+                                    <p class="error_msg" id="CybersecurityCert_date_error"></p>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
@@ -1423,35 +1452,39 @@
                     </div>
                     <div class="col-xl-8 examform" id="form_PythonCert" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <a href="#certify-list" onclick="hideExamForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
                             <h4 class="text-primary">สมัครสอบ Certify</h4>
                             <h1 class="display-5 mb-0">สมัครสอบวิชา: Python Programming Certificate</h1>
                         </div>
-                        <form onsubmit="return เช็ควิชา_PythonCert()">
+                        <form novalidate onsubmit="return checkExam_PythonCert()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="PythonCert_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="PythonCert_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="PythonCert_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="PythonCert_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="PythonCert_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="PythonCert_email" placeholder="อีเมล" required>
                                         <label for="PythonCert_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="PythonCert_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="PythonCert_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="PythonCert_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="PythonCert_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="PythonCert_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="date" class="form-control border-0" id="PythonCert_date">
+                                        <input type="date" class="form-control border-0" id="PythonCert_date" required>
                                         <label for="PythonCert_date">วันที่สอบที่ต้องการ</label>
                                     </div>
+                                    <p class="error_msg" id="PythonCert_date_error"></p>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
@@ -1472,35 +1505,39 @@
                     </div>
                     <div class="col-xl-8 examform" id="form_UXUICert" style="display:none;">
                         <div class="text-center mb-4">
-                            <a href="#certify-list" onclick="ซ่อนวิชาสอบทั้งหมด(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
+                            <a href="#certify-list" onclick="hideExamForms(); return false;" class="text-primary d-inline-block mb-3"><i class="fas fa-arrow-left me-2"></i>เลือกวิชาอื่น</a>
                             <h4 class="text-primary">สมัครสอบ Certify</h4>
                             <h1 class="display-5 mb-0">สมัครสอบวิชา: UX/UI Design Certificate</h1>
                         </div>
-                        <form onsubmit="return เช็ควิชา_UXUICert()">
+                        <form novalidate onsubmit="return checkExam_UXUICert()">
                             <div class="row g-3">
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="UXUICert_name" placeholder="ชื่อ-นามสกุล">
+                                        <input type="text" class="form-control border-0" id="UXUICert_name" placeholder="ชื่อ-นามสกุล" required>
                                         <label for="UXUICert_name">ชื่อ-นามสกุล</label>
                                     </div>
+                                    <p class="error_msg" id="UXUICert_name_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="UXUICert_email" placeholder="อีเมล">
+                                        <input type="email" class="form-control border-0" id="UXUICert_email" placeholder="อีเมล" required>
                                         <label for="UXUICert_email">อีเมล</label>
                                     </div>
+                                    <p class="error_msg" id="UXUICert_email_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="UXUICert_phone" placeholder="เบอร์โทร">
+                                        <input type="tel" class="form-control border-0" id="UXUICert_phone" maxlength="10" placeholder="เบอร์โทร" required>
                                         <label for="UXUICert_phone">เบอร์โทร</label>
                                     </div>
+                                    <p class="error_msg" id="UXUICert_phone_error"></p>
                                 </div>
                                 <div class="col-lg-12 col-xl-6">
                                     <div class="form-floating">
-                                        <input type="date" class="form-control border-0" id="UXUICert_date">
+                                        <input type="date" class="form-control border-0" id="UXUICert_date" required>
                                         <label for="UXUICert_date">วันที่สอบที่ต้องการ</label>
                                     </div>
+                                    <p class="error_msg" id="UXUICert_date_error"></p>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
@@ -1532,7 +1569,7 @@
             <div class="container text-center py-5" style="max-width: 900px;">
                 <h4 class="text-white display-4 mb-4">เกี่ยวกับเรา</h4>
                 <ol class="breadcrumb d-flex justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#home" onclick="แสดงหน้า('home'); return false;">หน้าแรก</a></li>
+                    <li class="breadcrumb-item"><a href="#home" onclick="showPage('home'); return false;">หน้าแรก</a></li>
                     <li class="breadcrumb-item active text-primary">เกี่ยวกับเรา</li>
                 </ol>
             </div>
@@ -1570,7 +1607,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="contact-add-item h-100 text-center">
                             <div class="member-photo mx-auto mb-3">
-                                <img src="img/member1.png" alt="ชินวัตร อ่วมแก้ว">
+                                <img src="images/member1.png" alt="ชินวัตร อ่วมแก้ว">
                             </div>
                             <h5 class="mb-1">(ชินวัตร อ่วมแก้ว)</h5>
                             <p class="text-muted small mb-3">1660701283</p>
@@ -1579,7 +1616,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="contact-add-item h-100 text-center">
                             <div class="member-photo mx-auto mb-3">
-                                <img src="img/member2.jpg" alt="ศรีรัตน์ อินทลัย">
+                                <img src="images/member2.jpg" alt="ศรีรัตน์ อินทลัย">
                             </div>
                             <h5 class="mb-1">(ศรีรัตน์ อินทลัย)</h5>
                             <p class="text-muted small mb-3">1660705185</p>
@@ -1591,110 +1628,14 @@
 
         </section>
 
-        <!-- ติดต่อเรา -->
-        <section id="page-contact" class="page-section" style="display:none;">
-
-        <div class="container-fluid bg-breadcrumb">
-            <div class="container text-center py-5" style="max-width: 900px;">
-                <h4 class="text-white display-4 mb-4">ติดต่อเรา</h4>
-                <ol class="breadcrumb d-flex justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#home" onclick="แสดงหน้า('home'); return false;">หน้าแรก</a></li>
-                    <li class="breadcrumb-item active text-primary">ติดต่อเรา</li>
-                </ol>
-            </div>
-        </div>
-
-        <!-- ฟอร์มติดต่อเรา -->
-        <div class="container-fluid contact bg-light py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                    <h4 class="text-primary">ทีมงานพร้อมช่วยเหลือ</h4>
-                    <h1 class="display-4 mb-4">มีคำถาม ทักมาคุยกับเราได้เลย</h1>
-                    <p class="mb-0">ไม่ว่าจะสงสัยเรื่องการสมัครงาน การลงทะเบียนอบรม หรือการสอบ Certify ทีมงาน JobCert ยินดีตอบทุกคำถาม</p>
-                </div>
-
-                <div class="row g-4 mb-5">
-                    <div class="col-md-4">
-                        <div class="contact-add-item h-100">
-                            <div class="contact-icon text-primary mb-3">
-                                <i class="fas fa-map-marker-alt fa-2x"></i>
-                            </div>
-                            <h4>ที่อยู่</h4>
-                            <p class="mb-0">มหาวิทยาลัยกรุงเทพ วิทยาเขตรังสิต 9/1 หมู่ 5 ถนนพหลโยธิน ตำบลคลองหนึ่ง อำเภอคลองหลวง ปทุมธานี 12120</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="contact-add-item h-100">
-                            <div class="contact-icon text-primary mb-3">
-                                <i class="fas fa-envelope fa-2x"></i>
-                            </div>
-                            <h4>อีเมล</h4>
-                            <p class="mb-0">info@jobcert.com</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="contact-add-item h-100">
-                            <div class="contact-icon text-primary mb-3">
-                                <i class="fas fa-phone-alt fa-2x"></i>
-                            </div>
-                            <h4>โทรศัพท์</h4>
-                            <p class="mb-0">02-123-4567</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center">
-                    <div class="col-xl-8">
-                        <div class="text-center mb-4">
-                            <h4 class="text-primary">ส่งข้อความหาเรา</h4>
-                            <h1 class="display-5 mb-0">แบบฟอร์มติดต่อ</h1>
-                        </div>
-                        <form onsubmit="return เช็คฟอร์มติดต่อ()">
-                            <div class="row g-3">
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="contactName" placeholder="ชื่อ-นามสกุล">
-                                        <label for="contactName">ชื่อ-นามสกุล</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control border-0" id="contactEmail" placeholder="อีเมล">
-                                        <label for="contactEmail">อีเมล</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control border-0" id="contactSubject" placeholder="หัวข้อ">
-                                        <label for="contactSubject">หัวข้อ</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control border-0" placeholder="ข้อความ" id="contactMessage" style="height: 120px"></textarea>
-                                        <label for="contactMessage">ข้อความ</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-primary w-100 py-3">ส่งข้อความ</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        </section>
-
 
         <!-- Footer -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container-fluid footer py-5">
             <div class="container py-5">
                 <div class="row">
                     <div class="col-12 text-center">
                         <div class="footer-item">
-                            <a href="#home" onclick="แสดงหน้า('home'); return false;" class="p-0">
+                            <a href="#home" onclick="showPage('home'); return false;" class="p-0">
                                 <h3 class="text-white"><i class="fas fa-robot me-3"></i> JobCert</h3>
                             </a>
                             <p class="text-white mb-0">เว็บไซต์สมัครงานสาย AI/ดิจิทัล รวมข้อมูลอบรม สัมมนา และสอบ Certify ไว้ในที่เดียว</p>
@@ -1714,21 +1655,14 @@
             </div>
         </div>
 
-        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+        <a href="#" onclick="window.scrollTo(0, 0); return false;" class="btn btn-primary btn-lg-square rounded-circle back-to-top" id="backToTop" style="display:none;"><i class="fa fa-arrow-up"></i></a>
 
 
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <!-- bootstrap ใช้เปิด/ปิดเมนูมือถือ กับกล่องกดดูรายละเอียด -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-
-        <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script src="js/validation.js"></script>
     </body>
 
 </html>
